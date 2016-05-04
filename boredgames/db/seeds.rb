@@ -40,7 +40,7 @@ results.each do |stuff|
 		game = Game.create({name: title,
 												description: description,
 												play_time: play_time,
-												image: image_link,
+												image_url: image_link,
 												min_players: min_players,
 												max_players: max_players,
 												year_published: published})
