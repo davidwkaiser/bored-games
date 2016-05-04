@@ -1,0 +1,7 @@
+.user-profile
+  %h1= @user.username
+  %p we will add list of games and other user stuff later
+
+  = link_to 'Edit', edit_user_path(@user)
+  = button_to 'Delete', @user, method: :delete, data: {confirm: "Are you sure?"}
+  = button_to 'Add Friend'
