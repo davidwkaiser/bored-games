@@ -1,0 +1,9 @@
+.game-info
+  %h1= @game.name
+  - if current_user
+  %ul.description
+    %li= "Time to Play: #{@game.play_time} minutes"
+    %li= "Players: #{@game.min_players} - #{@game.max_players}"
+    %li= "Published: #{@game.year_published}"
+  %h4 Description
+  %p= @game.description
