@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   has_many :votes
   has_many :voted_games, through: :votes, class_name: "Game"
   has_many :relationships
-  has_many :friends, through: :relationships, class_name: "User"
+  has_many :sent_requests, through: :relationships, source: :sender
+  has_many :received_requests, through: :relationships, source: :receiver
 end
