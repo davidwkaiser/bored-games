@@ -1,3 +1,4 @@
+require 'open-uri'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -8,7 +9,7 @@
 page = 0
 
 results = []
-5.times do 
+5.times do
 	page += 1
 	doc = Nokogiri::XML(open("http://boardgamegeek.com/browse/boardgame/page/#{page}"))
 	parsed_data = doc.css("a").map { |link| link['href'] }.select{ |path| path =~ /\A\/boardgame/ }.map { |url| url.split("/") }.map { |element| element[2] }.uniq
@@ -32,7 +33,7 @@ results.each do |stuff|
 	max_players = game_data.css('maxplayers')[0][:value]
 	published = game_data.css('yearpublished')[0][:value]
 	mechanics = game_data.css("link").select { |link| link[:type] == "boardgamemechanic" }.map { |link| link[:value] }
-	
+
 	game = Game.create({name: title,
 											description: description,
 											play_time: play_time,
@@ -43,6 +44,6 @@ results.each do |stuff|
 	mechanics.each do |mechanic|
 		game.mechanics.find_or_create_by(description: mechanic)
 	end
-	
+
 	sleep 1
 end
