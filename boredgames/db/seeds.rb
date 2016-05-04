@@ -33,16 +33,16 @@ results.each do |stuff|
 	published = game_data.css('yearpublished')[0][:value]
 	mechanics = game_data.css("link").select { |link| link[:type] == "boardgamemechanic" }.map { |link| link[:value] }
 	
-	# game = Game.create({name: title,
-	# 										description: description,
-	# 										play_time: play_time,
-	# 										min_players: min_players,
-	# 										max_players: max_players,
-	# 										year_published: published})
+	game = Game.create({name: title,
+											description: description,
+											play_time: play_time,
+											min_players: min_players,
+											max_players: max_players,
+											year_published: published})
 
-	# mechanics.each do |mechanic|
-	# 	game.mechanics.find_or_create_by(description: mechanic)
-	# end
+	mechanics.each do |mechanic|
+		game.mechanics.find_or_create_by(description: mechanic)
+	end
 	
 	sleep 1
 end
