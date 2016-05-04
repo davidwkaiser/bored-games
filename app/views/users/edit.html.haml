@@ -1,0 +1,11 @@
+.edit-user-form
+  - if @user.errors.any?
+    - @user.errors.full_messages.each do |msg|
+      %li= msg
+  = form_for @user do |f|
+    = f.text_field :username, placeholder: @user.username
+    = f.text_field :password, placeholder: "password"
+    = f.text_field :password_confirmation, placeholder: "confirm password"
+    = f.submit
+
+
