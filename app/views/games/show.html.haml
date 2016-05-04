@@ -1,6 +1,8 @@
 .game-info
   %h1= @game.name
-  - if current_user
+  - if current_user && !current_user.games.include?(@game)
+    .button
+      %p Add to Library
   %ul.description
     %li= "Time to Play: #{@game.play_time} minutes"
     %li= "Players: #{@game.min_players} - #{@game.max_players}"
