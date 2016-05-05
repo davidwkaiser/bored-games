@@ -8,6 +8,11 @@
     .button
       = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
   .description
+    - if @vote
+      - if @vote.errors.any
+        = @vote.errors.full_messages
+    = link_to "Vote!", votes_path(voteable_id: @game.id), method: :post
+    %p Votes: #{@game.votes.count}
     %p= "Time to Play: #{@game.play_time} minutes"
     %p= "Players: #{@game.min_players} - #{@game.max_players}"
     %p= "Published: #{@game.year_published}"

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
 
   ### Uncomment associations as they are created
+  has_many :votes
   has_many :additions
   has_many :games, through: :additions
   has_many :votes
