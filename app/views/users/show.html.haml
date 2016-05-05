@@ -4,4 +4,17 @@
 
   = link_to 'Edit', edit_user_path(@user)
   = button_to 'Delete', @user, method: :delete, data: {confirm: "Are you sure?"}
-  = button_to 'Add Friend'
+  = button_to 'Add Friend', [@user, :relationships]
+
+  %h3 Friends
+  %ul
+    - @user.friends.each do |friend|
+      %li
+        %h4= link_to "#{friend.username}", friend
+
+
+  %h3 Game Library
+  %ul
+    - @user.games.each do |game|
+      %li
+        %h4= link_to "#{game.name}", game
