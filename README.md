@@ -6,7 +6,7 @@ Members:
 * Oscar Delgadillo
 * David Kaiser
 
- User Stories for MVP:
+User Stories for MVP:
 
 * As a user...
 	* I want to be able to sign up with a unique username and password
