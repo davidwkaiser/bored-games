@@ -6,13 +6,16 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %nav
-      %ul
-        %li= link_to "Home", root_path
-        -if current_user
-          %li= link_to current_user.username, current_user
-          %li= button_to 'Logout', "/logout", method: :delete
-        -else
-          %li= link_to "Register", '/users/new'
-          %li= link_to "Login", "/login"
-    = yield
+    %header
+      %h1.title Bored? Games.
+      %nav
+        %ul
+          %li= link_to "Home", root_path
+          -if current_user
+            %li= link_to current_user.username, current_user
+            %li= button_to 'Logout', "/logout", method: :delete
+          -else
+            %li= link_to "Register", '/users/new'
+            %li= link_to "Login", "/login"
+    .container        
+      = yield
