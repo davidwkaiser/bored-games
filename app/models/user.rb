@@ -17,4 +17,8 @@ class User < ActiveRecord::Base
     friends = self.requested_friends + self.friend_requests
     friends.uniq!
   end
+
+  # def games
+  #   Game.all
+  # end
 end

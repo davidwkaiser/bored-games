@@ -13,3 +13,8 @@
         %h4= link_to "#{friend.username}", friend
 
 
+  %h3 Game Library
+  %ul
+    - @user.games.each do |game|
+      %li
+        %h4= link_to "#{game.name}", game
