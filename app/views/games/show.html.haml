@@ -3,7 +3,10 @@
   %img{ src: "http:"+@game.image_url }
   - if current_user && !current_user.games.include?(@game)
     .button
-      %p Add to Library
+      = link_to "Add to Library", additions_path(game_id: @game.id), method: :post
+  - elsif current_user && current_user.games.include?(@game)
+    .button
+      = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
   %ul.description
     %li= "Time to Play: #{@game.play_time} minutes"
     %li= "Players: #{@game.min_players} - #{@game.max_players}"

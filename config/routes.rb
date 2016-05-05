@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :relationships
   end
   resources :games
+  resources :additions
 
   root "games#index"
 
