@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users do
+    resources :relationships
+  end
   resources :games
   # root => "games#index"
 

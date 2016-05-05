@@ -8,7 +8,13 @@ class User < ActiveRecord::Base
   has_many :games, through: :additions
   has_many :votes
   has_many :voted_games, through: :votes, class_name: "Game"
-  has_many :relationships
-  has_many :sent_requests, through: :relationships, source: :sender
-  has_many :received_requests, through: :relationships, source: :receiver
+  has_many :received_relationships, class_name: "Relationship", foreign_key: :sender_id
+  has_many :sent_relationships, class_name: "Relationship", foreign_key: :receiver_id
+  has_many :requested_friends, through: :sent_relationships, source: :sender
+  has_many :friend_requests, through: :received_relationships, source: :receiver
+
+  def friends
+    friends = self.requested_friends + self.friend_requests
+    friends.uniq!
+  end
 end
