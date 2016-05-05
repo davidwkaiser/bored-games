@@ -13030,3 +13030,2319 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.haml within layouts/application (4.7ms)
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
 Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 09:12:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (13.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (20.2ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (228.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 1692ms (Views: 1617.6ms | ActiveRecord: 36.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-05-05 09:12:34 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hzJtcyc06/t5yDVGgpvifTqL+Dsn15v+zbYAJGbBaYVqwRJu5y4bi6Wh830LRiCjq5Mp3bjqjmzI7xaM++ZluA=="}
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:12:34 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (54.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 91ms (Views: 89.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 09:12:37 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (4.0ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (146.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 173ms (Views: 167.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 09:29:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (38.9ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (241.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 740ms (Views: 637.5ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/assets/application.self-be78285ad245d8c003995dd2e77cc5a5578e271bfea52affeea0a2b6208c0321.css?body=1" for ::1 at 2016-05-05 09:29:49 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:29:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:29:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:29:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:29:50 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:30:17 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.9ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (105.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 134ms (Views: 128.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:30:17 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:30:17 -0500
+
+
+Started GET "/assets/application.self-b947e61bb545b35494f150876feea8a246e227c9b8d280f5e9f5cbde7e1829aa.css?body=1" for ::1 at 2016-05-05 09:30:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:30:17 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:30:17 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:30:32 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.1ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (262.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 321ms (Views: 314.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 09:31:48 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (5.5ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (360.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 466ms (Views: 451.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:31:49 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:31:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:31:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:31:49 -0500
+
+
+Started GET "/assets/application.self-1583f434279066cd021170625f93f885f2b01267f5a0cab66f767783561e3c6a.css?body=1" for ::1 at 2016-05-05 09:31:49 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:32:32 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (6.6ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (134.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 197ms (Views: 189.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/application.self-7bf4c9bc24c897cb5cbff77f6b6f63c432957ad5960cccf8bcff8e302af391aa.css?body=1" for ::1 at 2016-05-05 09:32:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:32:33 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:32:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:32:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:32:33 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:33:17 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.5ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (110.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 178ms (Views: 171.9ms | ActiveRecord: 5.0ms)
+
+
+
+
+Started GET "/assets/application.self-565ce0a3f8d7f18fa3ad21153e2f718d46b459e6faa7dea2e942efd48be709a6.css?body=1" for ::1 at 2016-05-05 09:33:17 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:33:17 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:33:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:33:17 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:33:17 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:33:55 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (9.8ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (136.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 220ms (Views: 208.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/application.self-027d42a39352b2fd79e003bd645830ab083785d44413d40e147dad25d0d88442.css?body=1" for ::1 at 2016-05-05 09:33:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:33:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:33:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:33:56 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:33:56 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:34:10 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (18.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 98ms (Views: 85.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:34:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+
+
+Started GET "/assets/application.self-027d42a39352b2fd79e003bd645830ab083785d44413d40e147dad25d0d88442.css?body=1" for ::1 at 2016-05-05 09:34:15 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:34:15 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:34:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:34:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:34:15 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:34:31 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:34:31 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:34:31 -0500
+
+
+Started GET "/assets/application.self-e7307188084f334a31489ca8d426afedbcf84d702fc72e4d3108ea2d14ab1649.css?body=1" for ::1 at 2016-05-05 09:34:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:34:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:34:31 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:34:54 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (67.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 109ms (Views: 102.9ms | ActiveRecord: 1.4ms)
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:34:55 -0500
+Started GET "/assets/application.self-fc0c063ed1c4fab84c498256b9f5288b15fde8052ff0698a055ef6db3a427b13.css?body=1" for ::1 at 2016-05-05 09:34:55 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:34:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:34:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:34:55 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:34:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-fc0c063ed1c4fab84c498256b9f5288b15fde8052ff0698a055ef6db3a427b13.css?body=1" for ::1 at 2016-05-05 09:34:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:34:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:34:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:34:57 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:34:57 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:35:08 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:35:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:35:08 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:35:08 -0500
+
+
+Started GET "/assets/application.self-9c59f1950a4f67219fa082b866302b720d94f29c1394dd7ad086fe4c716704ec.css?body=1" for ::1 at 2016-05-05 09:35:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:35:08 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:35:22 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-ae5a6c5b7580c79f7560dcd3200bcf3adfb1e68c98732b654618902c910c1626.css?body=1" for ::1 at 2016-05-05 09:35:22 -0500
+
+
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:35:22 -0500
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:35:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:35:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:35:22 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:35:39 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-3f448bace7b00d9cf67fd0ec219cdc86f9fcfce83bc9e1e543e6187f0dc5f681.css?body=1" for ::1 at 2016-05-05 09:35:39 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:35:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:35:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:35:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:35:40 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:36:02 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-76aa74e37cb1a5ce92a6cd2bc9096a410af5d5f01f790ebc2c21f7a59cc82d06.css?body=1" for ::1 at 2016-05-05 09:36:03 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:36:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:36:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:36:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:36:03 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:36:19 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-0f9bffc2dc4d99657977589ce503702fb7c4e37b2eb813bc5f8317ab14248006.css?body=1" for ::1 at 2016-05-05 09:36:20 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:36:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:36:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:36:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:36:20 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:36:48 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-360c9abaaa436c5086563c6ab85292807eb4af000749617a555286027e18346e.css?body=1" for ::1 at 2016-05-05 09:36:48 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:36:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:36:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:36:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:36:48 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:41:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:41:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:41:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:41:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:41:15 -0500
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:41:15 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:42:01 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:42:01 -0500
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:42:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:42:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:42:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:42:01 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:42:11 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:42:12 -0500
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:42:12 -0500
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:42:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:42:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:42:12 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:42:14 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:42:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:42:15 -0500
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:42:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:42:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:42:15 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:42:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:42:36 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:42:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:42:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:42:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:42:36 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:43:38 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:43:38 -0500
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:43:38 -0500
+
+
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:43:38 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:43:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:43:38 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:43:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+...false((link_to "| "current_user.username, current_user
+...                               ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:13: syntax error, unexpected '\n', expecting '='
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:15: unknown regexp option - l
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:15: syntax error, unexpected $undefined
+));}</li>\n", 0, false);else
+          ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:17: syntax error, unexpected ')'
+));}</li>\n        <li>#{_haml...
+ ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:18: unknown regexp option - l
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:18: syntax error, unexpected $undefined
+));}</li>\n", 0, false);end;_hamlout.pu...
+          ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:18: unknown regexp options - av
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:18: syntax error, unexpected $undefined
+..._text("      </ul>\n    </nav>\n    #{_hamlout.adjust_tabs(-...
+...                               ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:19: syntax error, unexpected '}', expecting tSTRING_DEND
+));}\n  </body>\n</html>\n", -2, ...
+    ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:19: unknown regexp options - htl
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:19: syntax error, unexpected $undefined
+));}\n  </body>\n</html>\n", -2, false);::Haml::Util.h...
+                         ^
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:19: unterminated string meets end of file
+/Users/welamin/Desktop/client-project-challenge/app/views/layouts/application.html.haml:19: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  app/views/layouts/application.html.haml:13: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.haml:13: syntax error, unexpected '\n', expecting '='
+  app/views/layouts/application.html.haml:15: unknown regexp option - l
+  app/views/layouts/application.html.haml:15: syntax error, unexpected $undefined
+  app/views/layouts/application.html.haml:17: syntax error, unexpected ')'
+  app/views/layouts/application.html.haml:18: unknown regexp option - l
+  app/views/layouts/application.html.haml:18: syntax error, unexpected $undefined
+  app/views/layouts/application.html.haml:18: unknown regexp options - av
+  app/views/layouts/application.html.haml:18: syntax error, unexpected $undefined
+  app/views/layouts/application.html.haml:19: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/layouts/application.html.haml:19: unknown regexp options - htl
+  app/views/layouts/application.html.haml:19: syntax error, unexpected $undefined
+  app/views/layouts/application.html.haml:19: unterminated string meets end of file
+  app/views/layouts/application.html.haml:19: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+
+
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.5ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.6ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/welamin/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (200.8ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:44:04 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:44:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:44:04 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:44:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:44:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:44:04 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:44:08 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:44:08 -0500
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:44:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:44:08 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:44:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:44:08 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:44:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-ba9bffe7c70be4313069e6320747e072bc36e73c89a7fe5b4871c617188e250e.css?body=1" for ::1 at 2016-05-05 09:44:15 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:44:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:44:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:44:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:44:15 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:44:37 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-0d83417674f636c7302085d9ca6588c8b2d8803bc7c1da34289fb02797ec335d.css?body=1" for ::1 at 2016-05-05 09:44:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:44:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:44:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:44:37 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:44:37 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:44:51 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:44:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:44:51 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:44:51 -0500
+
+
+Started GET "/assets/application.self-0d83417674f636c7302085d9ca6588c8b2d8803bc7c1da34289fb02797ec335d.css?body=1" for ::1 at 2016-05-05 09:44:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:44:51 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:45:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-0d83417674f636c7302085d9ca6588c8b2d8803bc7c1da34289fb02797ec335d.css?body=1" for ::1 at 2016-05-05 09:45:16 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:45:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:45:16 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:45:16 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:45:16 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:45:22 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:45:23 -0500
+
+
+Started GET "/assets/application.self-94317f55d60d5b018d89b536df5b8ca98a4cdafbdc9712c669e92c8782c088dd.css?body=1" for ::1 at 2016-05-05 09:45:23 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:45:23 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:45:23 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:45:23 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:45:54 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-8c9f9e77858564c7d5ccc8d5a1d214e32ab373ef09c39c26e5e907dc5fb3b3cb.css?body=1" for ::1 at 2016-05-05 09:45:54 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:45:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:45:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:45:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:45:54 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:46:04 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-1b457c77a9255c9128e13c544b6ae74e969dbbca9ed08076aa94c8c49f79be2a.css?body=1" for ::1 at 2016-05-05 09:46:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:46:05 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:46:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:46:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:46:05 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:46:20 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-2688b45c397d689e8d26e65eea6ab7cf3fbf6b8c7cdc2d78fc0984d740d8a4df.css?body=1" for ::1 at 2016-05-05 09:46:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:46:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:46:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:46:20 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:46:20 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:46:27 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:46:28 -0500
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:46:28 -0500
+
+
+Started GET "/assets/application.self-1b457c77a9255c9128e13c544b6ae74e969dbbca9ed08076aa94c8c49f79be2a.css?body=1" for ::1 at 2016-05-05 09:46:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:46:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:46:28 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:46:41 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e069b711ce67c2216048d689aa8df1b5fbb0147045bc5833cfe2c42e6e5bae33.css?body=1" for ::1 at 2016-05-05 09:46:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:46:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:46:42 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:46:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:46:42 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:47:03 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:47:03 -0500
+Started GET "/assets/application.self-f34a5db3446854644d0ade6600380879a97b894b6ad85958afc3ace24c9b2123.css?body=1" for ::1 at 2016-05-05 09:47:03 -0500
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:47:03 -0500
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:47:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:47:03 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:47:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:47:15 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:47:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:47:15 -0500
+
+
+Started GET "/assets/application.self-70779a6ad28448197fb6102529337138b101e05a7b02f74b8609fbdf92b4fada.css?body=1" for ::1 at 2016-05-05 09:47:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:47:15 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:47:29 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:47:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:47:29 -0500
+
+
+Started GET "/assets/application.self-ee975fe8146b88ef9599091be240ff4b3b4ca4c7028dc9c583b9e089ff6be538.css?body=1" for ::1 at 2016-05-05 09:47:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:47:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:47:29 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:47:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:47:36 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:47:36 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:47:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:47:36 -0500
+
+
+Started GET "/assets/application.self-96d823ccba4ab2325a6673e84664fb7cc2497d87e8d7b3040a58dc8914f33ef3.css?body=1" for ::1 at 2016-05-05 09:47:36 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:48:19 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:48:20 -0500
+Started GET "/assets/application.self-d0521f652a0b17a931108bb3ace5e8a74232c7832b58f3bcb1999743905576d6.css?body=1" for ::1 at 2016-05-05 09:48:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:48:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:48:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:48:20 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:48:32 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-143214a85f9c51050d3d9ad82b20a23528bb195361d63da8a116f3760287e836.css?body=1" for ::1 at 2016-05-05 09:48:32 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:48:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:48:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:48:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:48:32 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:48:53 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:48:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:48:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:48:54 -0500
+
+
+Started GET "/assets/application.self-c154bdedfa21c85b69f45e0298a42a0a4b905b5885f449e6f48ed3745f483cac.css?body=1" for ::1 at 2016-05-05 09:48:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:48:54 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:49:04 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-83cf85cf696199b74d446a7ffb383ab98881bbf8b84b6af85d7b8ed28b577672.css?body=1" for ::1 at 2016-05-05 09:49:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:49:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:49:04 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:49:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:49:04 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:49:32 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-4ae3175371fdc7db0dae3928e24c86b1670c33bc5103ab8d0f0693bddeac261f.css?body=1" for ::1 at 2016-05-05 09:49:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:49:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:49:32 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:49:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:49:32 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:49:48 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.6ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (101.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 124ms (Views: 117.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 09:50:38 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (12.0ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (482.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 609ms (Views: 581.3ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/assets/application.self-4ae3175371fdc7db0dae3928e24c86b1670c33bc5103ab8d0f0693bddeac261f.css?body=1" for ::1 at 2016-05-05 09:50:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:50:39 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:50:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:50:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:50:39 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:51:27 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (47.2ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (233.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 299ms (Views: 250.2ms | ActiveRecord: 47.9ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:51:27 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:51:27 -0500
+
+
+Started GET "/assets/application.self-4592ac9ba5afe47e3c0bf524b62dbd32040aa515d60da3e2b4361b6f184e3f80.css?body=1" for ::1 at 2016-05-05 09:51:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:51:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:51:27 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 09:51:31 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (53.0ms)[0m  [1mSELECT "games".* FROM "games"[0m
+
+
+Started GET "/" for ::1 at 2016-05-05 09:51:32 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.2ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (619.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 763ms (Views: 697.7ms | ActiveRecord: 53.5ms)
+  Rendered games/index.html.haml within layouts/application (222.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 253ms (Views: 246.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:51:38 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (7.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:51:41 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:51:41 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:51:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:51:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:51:41 -0500
+
+
+Started GET "/assets/application.self-4592ac9ba5afe47e3c0bf524b62dbd32040aa515d60da3e2b4361b6f184e3f80.css?body=1" for ::1 at 2016-05-05 09:51:41 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:52:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (3.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 76ms (Views: 74.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-0b8e017761217f8f782c099aee23ea5041c4ba2ba679240c0b7b01d825191af6.css?body=1" for ::1 at 2016-05-05 09:52:45 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:52:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:52:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:52:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:52:45 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:53:04 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-188e7b7395943d0e40eb37cdbf3cd72111d988be29c3abde820565dd0f127306.css?body=1" for ::1 at 2016-05-05 09:53:04 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:53:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:53:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:53:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:53:04 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:53:27 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-ead4f29aacad5532b52449e30f27163b16fe6a87baa0520d3604d397ac0de9d8.css?body=1" for ::1 at 2016-05-05 09:53:28 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:53:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:53:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:53:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:53:28 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:53:48 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-ead4f29aacad5532b52449e30f27163b16fe6a87baa0520d3604d397ac0de9d8.css?body=1" for ::1 at 2016-05-05 09:53:48 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:53:48 -0500
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:53:48 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:53:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:53:48 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:55:37 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:55:38 -0500
+
+
+Started GET "/assets/application.self-e56a0e0af013ffb128530dc49bcd79fe8868905d8b83e15cc90d44c583e3ee0b.css?body=1" for ::1 at 2016-05-05 09:55:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:55:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:55:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:55:38 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:56:03 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-2e88ab4bbcb753fb7fb676d9ce25914243145a2aaf51b0e80d7feb98bd2ffc2a.css?body=1" for ::1 at 2016-05-05 09:56:03 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:56:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:56:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:56:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:56:03 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:56:30 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:56:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:56:30 -0500
+
+
+Started GET "/assets/application.self-90cc191b2c7e777fb9d694b77653152ec07ad81fc22c2124d73f02408f258194.css?body=1" for ::1 at 2016-05-05 09:56:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:56:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:56:30 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:56:43 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-a5cc268dda7fde578a32b86b49467f1aa42ae3671b21fd203002b3ce74300aba.css?body=1" for ::1 at 2016-05-05 09:56:44 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:56:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:56:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:56:44 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:56:44 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:57:20 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:57:21 -0500
+Started GET "/assets/application.self-a5cc268dda7fde578a32b86b49467f1aa42ae3671b21fd203002b3ce74300aba.css?body=1" for ::1 at 2016-05-05 09:57:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:57:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:57:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:57:21 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:57:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-d916c494b7803d8e4461fe19e124cd1e7903ba43879561c1fa32b427a94797d5.css?body=1" for ::1 at 2016-05-05 09:57:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:57:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:57:37 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:57:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:57:37 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:58:13 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-eb6c4f0cf165e13d0d701307380f828d20b116cfd89abb2d03c0749a810e4f12.css?body=1" for ::1 at 2016-05-05 09:58:14 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:58:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:58:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:58:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:58:14 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:58:27 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-77d723a18e2cdcf83ae5d83a2faeaf71ff4c3ceaa3a442affe074e2cab3b5b2e.css?body=1" for ::1 at 2016-05-05 09:58:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:58:28 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:58:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:58:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:58:28 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:58:37 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:58:37 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:58:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:58:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:58:37 -0500
+
+
+Started GET "/assets/application.self-fb3b4bd096f542a98d33f7cf50b853b77f21503c9ca101a45c339820ac578e1a.css?body=1" for ::1 at 2016-05-05 09:58:37 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:58:42 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:58:42 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:58:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:58:42 -0500
+
+
+Started GET "/assets/application.self-77d723a18e2cdcf83ae5d83a2faeaf71ff4c3ceaa3a442affe074e2cab3b5b2e.css?body=1" for ::1 at 2016-05-05 09:58:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:58:42 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:58:51 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-867509fabeae44185d3f8972fef33ea97c72f9f29dc75754016546d7bbb41286.css?body=1" for ::1 at 2016-05-05 09:58:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:58:51 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:58:51 -0500
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:58:51 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:58:51 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:58:59 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-4ce866d84dd3c281afe36de9c8f9ef48b2daca77c1e6242dca2db89d0182c8fb.css?body=1" for ::1 at 2016-05-05 09:58:59 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:58:59 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:58:59 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:58:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:58:59 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:59:06 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-6cf00dd309f0fdf64fad2e1154682a56ad9152ea5c4d0275362a2c98d51ce9ee.css?body=1" for ::1 at 2016-05-05 09:59:06 -0500
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:59:06 -0500
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:59:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:59:06 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:59:06 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:59:30 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:59:30 -0500
+
+
+Started GET "/assets/application.self-f1d8554248772042105f7e243b93428fa9fa39bb9a57e3b5859de57beb5bb46f.css?body=1" for ::1 at 2016-05-05 09:59:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:59:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:59:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:59:30 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:59:33 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f1d8554248772042105f7e243b93428fa9fa39bb9a57e3b5859de57beb5bb46f.css?body=1" for ::1 at 2016-05-05 09:59:34 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:59:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:59:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:59:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:59:34 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 09:59:44 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/application.self-ee569b8b3b0fbc103e558aa0f0dbb4faa84d215ca6df0c856e3bc30d86282609.css?body=1" for ::1 at 2016-05-05 09:59:45 -0500
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 09:59:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 09:59:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 09:59:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 09:59:45 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:00:02 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-dc3fed70dead184c395a84ae849776cc3d9e6c1a4ffc65c0bd93c99b3fc79245.css?body=1" for ::1 at 2016-05-05 10:00:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:00:03 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:00:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:00:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:00:03 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:00:11 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-20663aa8ce10d14a94574d8c0e5e63d8c4ed3f6b7783462324a4b7d5ffcade6a.css?body=1" for ::1 at 2016-05-05 10:00:12 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:00:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:00:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:00:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:00:12 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:00:27 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:00:27 -0500
+Started GET "/assets/application.self-42064bbf2713c32322d2c5a9f294cbdd9640d1a448f72325f40288e961750cde.css?body=1" for ::1 at 2016-05-05 10:00:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:00:27 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:00:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:00:27 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:00:41 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-1f3d659eac4ff92634c097577f91046c42dfd70d7d71f6be6835f74f8468369b.css?body=1" for ::1 at 2016-05-05 10:00:41 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:00:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:00:41 -0500
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:00:41 -0500
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:00:41 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:01:11 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:01:11 -0500
+Started GET "/assets/application.self-2801885321afa33917b4948ee3e132b9fa3f0a0890c67930017c2a39f07b68da.css?body=1" for ::1 at 2016-05-05 10:01:11 -0500
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:01:11 -0500
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:01:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:01:11 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:01:21 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-b86366ed2bcd7363abac5eb7f57e691f61e6fc3ab8c03b2b3b62fcf6b1af93c3.css?body=1" for ::1 at 2016-05-05 10:01:21 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:01:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:01:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:01:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:01:21 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:01:34 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-7262174a16046457d65cddaef6a16f4c2825f0f97516599635e5f435d0ae1054.css?body=1" for ::1 at 2016-05-05 10:01:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:01:34 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:01:34 -0500
+
+
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:01:34 -0500
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:01:34 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:02:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-d062909eb3981a5b71f298ebafcd44930bbf0335e99f04d61f83c5c49af54016.css?body=1" for ::1 at 2016-05-05 10:02:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:02:37 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:02:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:02:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:02:37 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:03:55 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-440f266924e87e1920e2d82963f4082aeed73951f9296c76952bb37dd52a7e51.css?body=1" for ::1 at 2016-05-05 10:03:55 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:03:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:03:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:03:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:03:55 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:04:12 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-fb28d35dde38cdd1d370ead1a3b937e6a0d93acf24d4168e4b38a72430bc2223.css?body=1" for ::1 at 2016-05-05 10:04:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:04:13 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:04:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:04:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:04:13 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:04:30 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (4.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (119.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 146ms (Views: 140.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 10:04:30 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (6.1ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (201.5ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 234ms (Views: 226.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:05:28 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (9.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 117ms (Views: 105.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:05:28 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (3.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-deaa3833dbf82bcd017b9785e276739a51ae603fc9c5b163c352e2d398987af2.css?body=1" for ::1 at 2016-05-05 10:05:28 -0500
+
+
+Started GET "/login" for ::1 at 2016-05-05 10:05:30 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (23.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-05 10:06:27 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (17.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 122ms (Views: 117.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-0339898e8976fe782c05d6c85260f07a0ec659b455f0627293602221b095d1ff.css?body=1" for ::1 at 2016-05-05 10:06:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:06:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:06:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:06:28 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:06:28 -0500
+
+
+Started GET "/login" for ::1 at 2016-05-05 10:06:31 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-0339898e8976fe782c05d6c85260f07a0ec659b455f0627293602221b095d1ff.css?body=1" for ::1 at 2016-05-05 10:06:31 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:06:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:06:31 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:06:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:06:31 -0500
+
+
+Started GET "/login" for ::1 at 2016-05-05 10:06:38 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.4ms)
+
+
+
+Started GET "/assets/application.self-bc284dfdca94acc415ffefb3d607c2a94901982454f1c1d05ab11b452edb94e2.css?body=1" for ::1 at 2016-05-05 10:06:38 -0500
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:06:38 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:06:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:06:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:06:38 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:07:18 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (7.0ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (103.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 135ms (Views: 127.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 10:07:19 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (15.3ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (494.4ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 560ms (Views: 543.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/application.self-b64f9792d1b11d3eaa827a3a305dde76b0d8ba2c096a1535540cdef31daf2b98.css?body=1" for ::1 at 2016-05-05 10:07:20 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:07:31 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (6.2ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (182.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 221ms (Views: 210.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.self-b64f9792d1b11d3eaa827a3a305dde76b0d8ba2c096a1535540cdef31daf2b98.css?body=1" for ::1 at 2016-05-05 10:07:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:07:32 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:07:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:07:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:07:32 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:08:19 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (9.7ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (377.2ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 477ms (Views: 450.3ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/application.self-f4ae8d01a248bc7fa90595b24bec7226ce659ca64bb2f1312a8817307a451b85.css?body=1" for ::1 at 2016-05-05 10:08:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:08:20 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:08:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:08:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:08:20 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:08:52 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (8.4ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (194.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 284ms (Views: 273.1ms | ActiveRecord: 9.0ms)
+
+
+
+
+Started GET "/assets/application.self-e3bba13be0b9da76140abe762773fa1e93ea2db51caad53641d8ab37aaa94119.css?body=1" for ::1 at 2016-05-05 10:08:53 -0500
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:08:53 -0500
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:08:53 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:08:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:08:53 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:09:25 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (43.8ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (218.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 310ms (Views: 258.7ms | ActiveRecord: 44.3ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:09:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:09:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:09:26 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:09:26 -0500
+
+
+Started GET "/assets/application.self-0c7b0d20abe2be0614dab7708e2107316ce58b470dff1a9bd1b2c14a869e09d1.css?body=1" for ::1 at 2016-05-05 10:09:26 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:09:55 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (13.0ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (180.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 231ms (Views: 215.9ms | ActiveRecord: 13.4ms)
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:09:56 -0500
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:09:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:09:56 -0500
+
+
+Started GET "/assets/application.self-b6a165f1b7dfb8bcecdd0b1ad658ea4e72ded64e3aeee71e8a0f9bfc5d39a009.css?body=1" for ::1 at 2016-05-05 10:09:56 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:09:56 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:10:24 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (7.3ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (261.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 341ms (Views: 324.4ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/application.self-11e87504d8612ace5dc875cbd3943a3cccaad7269d6430f8037a648be87fc5f2.css?body=1" for ::1 at 2016-05-05 10:10:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:10:24 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:10:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:10:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:10:24 -0500
+
+
+Started GET "/assets/application.self-11e87504d8612ace5dc875cbd3943a3cccaad7269d6430f8037a648be87fc5f2.css?body=1" for ::1 at 2016-05-05 10:10:59 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:11:50 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.3ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (187.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 269ms (Views: 261.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.self-909901a407a356cc1eb7e7133dbfc3498a3f81e300adcebc980419e43040c68a.css?body=1" for ::1 at 2016-05-05 10:11:51 -0500
+
+
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:11:51 -0500
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:11:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:11:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:11:51 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:11:58 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (5.4ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (117.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 157ms (Views: 150.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:11:59 -0500
+
+
+Started GET "/assets/application.self-909901a407a356cc1eb7e7133dbfc3498a3f81e300adcebc980419e43040c68a.css?body=1" for ::1 at 2016-05-05 10:11:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:11:59 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:11:59 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:11:59 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:12:36 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.1ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (126.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 151ms (Views: 144.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:12:37 -0500
+
+
+Started GET "/assets/application.self-909901a407a356cc1eb7e7133dbfc3498a3f81e300adcebc980419e43040c68a.css?body=1" for ::1 at 2016-05-05 10:12:37 -0500
+
+
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:12:37 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:12:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:12:37 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:14:29 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (13.5ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (153.8ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 234ms (Views: 218.5ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/assets/application.self-e1b59ba0907247484a3529211ae21af43943a74f1e7423b7eaa8dcae0e2ae8df.css?body=1" for ::1 at 2016-05-05 10:14:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:14:29 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:14:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:14:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:14:29 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:14:52 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (6.7ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (179.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 246ms (Views: 238.4ms | ActiveRecord: 7.3ms)
+
+
+
+
+Started GET "/assets/application.self-28f2e2ab81f644830347163ba246ac2221b854209d2e5be8f65e60295425bbd3.css?body=1" for ::1 at 2016-05-05 10:14:53 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:14:53 -0500
+
+
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:14:53 -0500
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:14:53 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:14:53 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:15:05 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.5ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (139.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 184ms (Views: 176.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:15:06 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:15:06 -0500
+
+
+Started GET "/assets/application.self-28f2e2ab81f644830347163ba246ac2221b854209d2e5be8f65e60295425bbd3.css?body=1" for ::1 at 2016-05-05 10:15:06 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:15:06 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:15:06 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:15:24 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (4.7ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (170.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 235ms (Views: 228.7ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/application.self-4aefc9014d52ebec04ee6f70b6ccb1e41a9d658b88a9ce42ec6735c287c3b925.css?body=1" for ::1 at 2016-05-05 10:15:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:15:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:15:25 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:15:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:15:25 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:16:07 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (3.9ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (204.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 283ms (Views: 277.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.self-a5c6abd90b0797156c418b60109a3130115da406725952a311b329319390b97b.css?body=1" for ::1 at 2016-05-05 10:16:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:16:08 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:16:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:16:08 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:16:08 -0500
+
+
+Started GET "/" for ::1 at 2016-05-05 10:16:21 -0500
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (14.2ms)[0m  [1mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.haml within layouts/application (288.2ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 375ms (Views: 350.8ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/assets/application.self-bd4f1afd34af1380d0c9be3e92201760695a390d109a946fc429ebdfaac5b843.css?body=1" for ::1 at 2016-05-05 10:16:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 10:16:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 10:16:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 10:16:21 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 10:16:22 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-05-05 10:16:59 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (3.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2016-05-05 10:17:00 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-05 10:17:01 -0500
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (5.1ms)[0m  SELECT "games".* FROM "games"
+  Rendered games/index.html.haml within layouts/application (156.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 185ms (Views: 179.0ms | ActiveRecord: 5.5ms)

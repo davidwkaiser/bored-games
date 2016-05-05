@@ -21,3 +21,69 @@ img {
 ul img {
   width: 150px;
 }
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	text-align: center;
+	display: inline;
+}
+
+nav a {
+	font-size: 1.5em;
+	height: 1.5em;
+	float: left;
+	text-decoration: none;
+	display: block;
+	margin-right: 1em;
+	padding-top: 0.5em;
+}
+
+.title {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+header, header nav {
+	margin: 0 auto;
+	text-align: center;
+	background-color: #FFCF78;
+	width: 45%;
+	margin-right: 27.5%;
+	margin-left: 27.5%;
+	display: inline-block;
+}
+.container {
+	margin-top: 2em;
+	margin-right: 10%;
+	margin-left: 10%;
+	width: 80%;
+	
+}
+
+.login-form, .new-user-form, .edit-user-form {
+	text-align: center;
+	width: 100%;
+	background-color: #FFCF78;
+}
+
+.games-list {
+	text-align: center;
+
+}
+
+.game-listing {
+	border-top: 1px solid black;
+}
+
+.game-listing, .game-listing .description p {
+	text-align: left;
+}
+
+.game-listing p{
+	text-align: justify;
+}
