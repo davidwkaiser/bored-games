@@ -34,7 +34,6 @@ results.each do |stuff|
 		max_players = game_data.css('maxplayers')[0][:value]
 		published = game_data.css('yearpublished')[0][:value]
 		image_link = game_data.css('image').text
-		puts image_link
 		mechanics = game_data.css("link").select { |link| link[:type] == "boardgamemechanic" }.map { |link| link[:value] }
 
 		game = Game.create({name: title,
@@ -48,7 +47,7 @@ results.each do |stuff|
 		mechanics.each do |mechanic|
 			game.mechanics.find_or_create_by(description: mechanic)
 		end
-		puts "all good!"
+		puts "#{title} added."
 	else
 		puts "There was bug in the system"
 	end
