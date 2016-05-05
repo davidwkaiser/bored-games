@@ -7,12 +7,12 @@
   - elsif current_user && current_user.games.include?(@game)
     .button
       = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
-  %ul.description
-    %li= "Time to Play: #{@game.play_time} minutes"
-    %li= "Players: #{@game.min_players} - #{@game.max_players}"
-    %li= "Published: #{@game.year_published}"
+  .description
+    %p= "Time to Play: #{@game.play_time} minutes"
+    %p= "Players: #{@game.min_players} - #{@game.max_players}"
+    %p= "Published: #{@game.year_published}"
   %h4 Description
-  %p= @game.description
+  %p.description-text= @game.description
   %ul.mechanics
     - @game.mechanics.each do |mechanic|
       %li= mechanic.description

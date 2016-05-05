@@ -7,16 +7,12 @@
   = button_to 'Add Friend', [@user, :relationships]
 
   %h3 Friends
-  %ul
-    - if @user.friends
-      - @user.friends.each do |friend|
-        %li
-          %h4= link_to "#{friend.username}", friend
+  - if @user.friends
+    - @user.friends.each do |friend|
+      %h4= link_to "#{friend.username}", friend
 
 
   %h3 Game Library
-  %ul
-    - if @user.games
-      - @user.games.each do |game|
-        %li
-          %h4= link_to "#{game.name}", game
+  - if @user.games
+    - @user.games.each do |game|
+      %h4= link_to "#{game.name}", game
