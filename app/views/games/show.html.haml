@@ -1,5 +1,6 @@
 .game-info
   %h1= @game.name
+  %img{ src: "http:"+@game.image_url }
   - if current_user && !current_user.games.include?(@game)
     .button
       %p Add to Library

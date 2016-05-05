@@ -4,6 +4,7 @@
     - @games.each do |game|
       %li
         %h3= link_to "#{game.name}", game
+        %img{ src: "http:"+game.image_url }
         %ul.description
           %li= "Time to Play: #{game.play_time} minutes"
           %li= "Players: #{game.min_players} - #{game.max_players}"
