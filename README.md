@@ -1,6 +1,6 @@
 Team A.R.C.H. (Adult Regular Coding Humans)
 
- Members:
+Members:
 * Josh Lugo
 * Wesley El-Amin
 * Oscar Delgadillo
