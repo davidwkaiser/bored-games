@@ -10,3 +10,6 @@
     %li= "Published: #{@game.year_published}"
   %h4 Description
   %p= @game.description
+  %ul.mechanics
+    - @game.mechanics.each do |mechanic|
+      %li= mechanic.description
