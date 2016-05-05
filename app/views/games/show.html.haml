@@ -12,7 +12,7 @@
     %p= "Players: #{@game.min_players} - #{@game.max_players}"
     %p= "Published: #{@game.year_published}"
   %h4 Description
-  %p.description-text= @game.description
+  %p.description-text= raw @game.description
   %ul.mechanics
     - @game.mechanics.each do |mechanic|
       %li= mechanic.description
