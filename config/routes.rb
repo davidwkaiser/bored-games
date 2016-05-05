@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'games/names' => 'games#names'
-  get 'games/votes' => 'games#votes'
+  get 'games/popularity' => 'games#popularity'
 
 
   resources :users do

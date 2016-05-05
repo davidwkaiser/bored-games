@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     @games = Game.paginate(:page => params[:page], :per_page => 10).order('name ASC')
   end
 
-  def votes
+  def popularity
     @games = Game.paginate(:page => params[:page], :per_page => 10).order(votes.count)
   end
 
