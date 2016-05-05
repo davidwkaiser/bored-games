@@ -28,7 +28,7 @@ results.each do |stuff|
 	game_data = parser(stuff)
 	if game_data != nil
 		title = game_data.css('name')[0][:value]
-		description = game_data.css("description").text.gsub(/&#10;/, "")
+		description = game_data.css("description").text
 		play_time = game_data.css('playingtime')[0][:value]
 		min_players = game_data.css('minplayers')[0][:value]
 		max_players = game_data.css('maxplayers')[0][:value]
