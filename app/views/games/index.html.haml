@@ -3,11 +3,13 @@
   %ul
     - @games.each do |game|
       .game-listing
-        %h3= link_to "#{game.name}", game
-        %img{ src: "http:"+game.image_url }
-        .description
+        .stats
+          %h3= link_to "#{game.name}", game
+          %img{ src: "http:"+game.image_url }
           %p= "Time to Play: #{game.play_time} minutes"
           %p= "Players: #{game.min_players} - #{game.max_players}"
           %p= "Published: #{game.year_published}"
-        %h4 Description
-        %p= game.description
+        .description-text
+          %h4.description-title Description
+          %p= game.description
+        %p.read-more= link_to "Read more about this game!", game
