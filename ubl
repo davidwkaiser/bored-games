@@ -1,0 +1,325 @@
+[1mdiff --cc app/views/games/show.html.haml[m
+[1mindex 123bb42,e068709..0000000[m
+[1m--- a/app/views/games/show.html.haml[m
+[1m+++ b/app/views/games/show.html.haml[m
+[36m@@@ -7,15 -7,12 +7,22 @@@[m
+    - elsif current_user && current_user.games.include?(@game)[m
+      .button[m
+        = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete[m
+[32m++<<<<<<< HEAD[m
+[32m +  = link_to "Vote!", votes_path(voteable_id: @game.id), method: :post[m
+[32m +  %p Votes: #{@game.votes.count}[m
+[32m +  %ul.description[m
+[32m +    %li= "Time to Play: #{@game.play_time} minutes"[m
+[32m +    %li= "Players: #{@game.min_players} - #{@game.max_players}"[m
+[32m +    %li= "Published: #{@game.year_published}"[m
+[32m +  [m
+[32m++=======[m
+[32m+   .description[m
+[32m+     %p= "Time to Play: #{@game.play_time} minutes"[m
+[32m+     %p= "Players: #{@game.min_players} - #{@game.max_players}"[m
+[32m+     %p= "Published: #{@game.year_published}"[m
+[32m++>>>>>>> master[m
+    %h4 Description[m
+[31m-   %p= @game.description[m
+[32m+   %p.description-text= @game.description[m
+    %ul.mechanics[m
+      - @game.mechanics.each do |mechanic|[m
+        %li= mechanic.description[m
+[1mdiff --cc tmp/pids/server.pid[m
+[1mindex cb1df91,2e8ed78..0000000[m
+[1m--- a/tmp/pids/server.pid[m
+[1m+++ b/tmp/pids/server.pid[m
+[36m@@@ -1,1 -1,1 +1,2 @@@[m
+[31m- 15765[m
+[31m -24441[m
+[32m++15765[m
+[32m++[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/-5/-5wyHV-11P-FVpZlj3TnBtFqStipBcN1gj0w6Qum9Us.cache b/tmp/cache/assets/sprockets/v3.0/-5/-5wyHV-11P-FVpZlj3TnBtFqStipBcN1gj0w6Qum9Us.cache[m
+[1mdeleted file mode 100644[m
+[1mindex be0cb0a..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/-5/-5wyHV-11P-FVpZlj3TnBtFqStipBcN1gj0w6Qum9Us.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%VËC¶k+˜ä¬Ù»ˆÑ<·DΩZ¶l-Ùx?∫ÖËÔ[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/-d/-dtPFjCpz9twI2FVDvAaTIKkIBex82ADZpLpfQ04ZNQ.cache b/tmp/cache/assets/sprockets/v3.0/-d/-dtPFjCpz9twI2FVDvAaTIKkIBex82ADZpLpfQ04ZNQ.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 69691ef..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/-d/-dtPFjCpz9twI2FVDvAaTIKkIBex82ADZpLpfQ04ZNQ.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"·/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery.js?type=application/javascript&pipeline=self&id=10a73585db852a542d2cf910f1a5c29df0eb5f419edabf183f8e12f7244562c9:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/1J/1JqyCBO_3dfP8ihs3yu4dMbUWibJimgFAhrM6Snw5-E.cache b/tmp/cache/assets/sprockets/v3.0/1J/1JqyCBO_3dfP8ihs3yu4dMbUWibJimgFAhrM6Snw5-E.cache[m
+[1mdeleted file mode 100644[m
+[1mindex ee329d8..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/1J/1JqyCBO_3dfP8ihs3yu4dMbUWibJimgFAhrM6Snw5-E.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"áapp/assets/stylesheets/application.css?type=text/css&pipeline=debug&id=f1528d0acb4555f4e222c7fb51916adb9609204280407efda838529a5b35e481:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/4u/4uRg0tL_CgtWvjfFg0MyuhT-Blf0G9_JFwbuR5gCirc.cache b/tmp/cache/assets/sprockets/v3.0/4u/4uRg0tL_CgtWvjfFg0MyuhT-Blf0G9_JFwbuR5gCirc.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 012a1e3..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/4u/4uRg0tL_CgtWvjfFg0MyuhT-Blf0G9_JFwbuR5gCirc.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"?processors:type=text/css&file_type=text/css&pipeline=debug;TTI"9file-digest://app/assets/stylesheets/application.css;TTI">processors:type=text/css&file_type=text/css&pipeline=self;TTI")file-digest://app/assets/stylesheets;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/60/60ussWXzdNhwjIcgYGsbwd1U7kEsfeBGyG8ATLZhVY0.cache b/tmp/cache/assets/sprockets/v3.0/60/60ussWXzdNhwjIcgYGsbwd1U7kEsfeBGyG8ATLZhVY0.cache[m
+[1mdeleted file mode 100644[m
+[1mindex a420eb1..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/60/60ussWXzdNhwjIcgYGsbwd1U7kEsfeBGyG8ATLZhVY0.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI">processors:type=text/css&file_type=text/css&pipeline=self;TTI"9file-digest://app/assets/stylesheets/application.css;TTI")file-digest://app/assets/stylesheets;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/6J/6JZFDHmadei4-St71cWfvm6jG8obkC88Ltx10vndHkc.cache b/tmp/cache/assets/sprockets/v3.0/6J/6JZFDHmadei4-St71cWfvm6jG8obkC88Ltx10vndHkc.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 2800ad3..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/6J/6JZFDHmadei4-St71cWfvm6jG8obkC88Ltx10vndHkc.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%„∞ƒBò¸ö˚Ù»ôoπ$'ÆA‰dõìL§ïôxR∏U[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/AP/APY89OAPJx9A3D3xcCoktvEvQUs7NcWChYXnjjjPzz0.cache b/tmp/cache/assets/sprockets/v3.0/AP/APY89OAPJx9A3D3xcCoktvEvQUs7NcWChYXnjjjPzz0.cache[m
+[1mdeleted file mode 100644[m
+[1mindex c42860f..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/AP/APY89OAPJx9A3D3xcCoktvEvQUs7NcWChYXnjjjPzz0.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{(I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TTI"8file-digest://app/assets/javascripts/application.js;TTI"$file-digest://app/assets/images;TTI"+file-digest://app/assets/images/jquery;TTI")file-digest://app/assets/javascripts;TTI"0file-digest://app/assets/javascripts/jquery;TTI")file-digest://app/assets/stylesheets;TTI"0file-digest://app/assets/stylesheets/jquery;TTI",file-digest://vendor/assets/javascripts;TTI"3file-digest://vendor/assets/javascripts/jquery;TTI",file-digest://vendor/assets/stylesheets;TTI"3file-digest://vendor/assets/stylesheets/jquery;TTI"wfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts;TTI"~file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/jquery;TTI"|file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts;TTI"~file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery;TTI"Åfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery.js;TTI"/file-digest://app/assets/images/jquery_ujs;TTI"4file-digest://app/assets/javascripts/jquery_ujs;TTI"4file-digest://app/assets/stylesheets/jquery_ujs;TTI"7file-digest://vendor/assets/javascripts/jquery_ujs;TTI"7file-digest://vendor/assets/stylesheets/jquery_ujs;TTI"}file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/jquery_ujs;TTI"Çfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs;TTI"Öfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs.js;TTI"/file-digest://app/assets/images/turbolinks;TTI"4file-digest://app/assets/javascripts/turbolinks;TTI"4file-digest://app/assets/stylesheets/turbolinks;TTI"7file-digest://vendor/assets/javascripts/turbolinks;TTI"7file-digest://vendor/assets/stylesheets/turbolinks;TTI"}file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks;TTI"áfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/CA/CAZczsJKrKzA-tqoL-QiEwWBifL47jBidwnGhEDdLT0.cache b/tmp/cache/assets/sprockets/v3.0/CA/CAZczsJKrKzA-tqoL-QiEwWBifL47jBidwnGhEDdLT0.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 1522c22..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/CA/CAZczsJKrKzA-tqoL-QiEwWBifL47jBidwnGhEDdLT0.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/DN/DNGtIgQUiSIu7HAnGJcfoCjpYUBVj2ZBYqJC3qhFdvY.cache b/tmp/cache/assets/sprockets/v3.0/DN/DNGtIgQUiSIu7HAnGJcfoCjpYUBVj2ZBYqJC3qhFdvY.cache[m
+[1mdeleted file mode 100644[m
+[1mindex fd738b4..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/DN/DNGtIgQUiSIu7HAnGJcfoCjpYUBVj2ZBYqJC3qhFdvY.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"Â/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs.js?type=application/javascript&pipeline=self&id=784cd6962bd9b324f4703d1a995103c1ef2d8a0deca6a2960478bb017116272a:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/EB/EBtbhweQl74JQNkwFL3ahZH_9x44ceqa9hOT8lQ_SfM.cache b/tmp/cache/assets/sprockets/v3.0/EB/EBtbhweQl74JQNkwFL3ahZH_9x44ceqa9hOT8lQ_SfM.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 63fb0e2..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/EB/EBtbhweQl74JQNkwFL3ahZH_9x44ceqa9hOT8lQ_SfM.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{*I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"[processors:type=application/javascript&file_type=application/javascript&pipeline=debug;TTI"8file-digest://app/assets/javascripts/application.js;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TTI"Åfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery.js;TTI"Öfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs.js;TTI"jprocessors:type=application/javascript&file_type=application/javascript&engines=.coffee&pipeline=self;TTI"áfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee;TTI"$file-digest://app/assets/images;TTI"+file-digest://app/assets/images/jquery;TTI")file-digest://app/assets/javascripts;TTI"0file-digest://app/assets/javascripts/jquery;TTI")file-digest://app/assets/stylesheets;TTI"0file-digest://app/assets/stylesheets/jquery;TTI",file-digest://vendor/assets/javascripts;TTI"3file-digest://vendor/assets/javascripts/jquery;TTI",file-digest://vendor/assets/stylesheets;TTI"3file-digest://vendor/assets/stylesheets/jquery;TTI"wfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts;TTI"~file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/jquery;TTI"|file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts;TTI"~file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery;TTI"/file-digest://app/assets/images/jquery_ujs;TTI"4file-digest://app/assets/javascripts/jquery_ujs;TTI"4file-digest://app/assets/stylesheets/jquery_ujs;TTI"7file-digest://vendor/assets/javascripts/jquery_ujs;TTI"7file-digest://vendor/assets/stylesheets/jquery_ujs;TTI"}file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/jquery_ujs;TTI"Çfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs;TTI"/file-digest://app/assets/images/turbolinks;TTI"4file-digest://app/assets/javascripts/turbolinks;TTI"4file-digest://app/assets/stylesheets/turbolinks;TTI"7file-digest://vendor/assets/javascripts/turbolinks;TTI"7file-digest://vendor/assets/stylesheets/turbolinks;TTI"}file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/GX/GXZIKlia3Ma7Nckrz2B02FRG36r3BT2dkbYP9wilNtI.cache b/tmp/cache/assets/sprockets/v3.0/GX/GXZIKlia3Ma7Nckrz2B02FRG36r3BT2dkbYP9wilNtI.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 226fa7c..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/GX/GXZIKlia3Ma7Nckrz2B02FRG36r3BT2dkbYP9wilNtI.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Ib/Ibzzh3et3GU32QUTthcaba9tI8BYNUDVQecnifDlhk4.cache b/tmp/cache/assets/sprockets/v3.0/Ib/Ibzzh3et3GU32QUTthcaba9tI8BYNUDVQecnifDlhk4.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 3e6282b..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/Ib/Ibzzh3et3GU32QUTthcaba9tI8BYNUDVQecnifDlhk4.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"Öapp/assets/javascripts/application.js?type=application/javascript&id=244f003daf021501f9cb5156fc989fda7581fd071263b4921acb82ca05e5cae3:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Im/Im4v1eeoDZ0y4slXwuhd6Gfbh3Ot5KdNYspGyBdUAHg.cache b/tmp/cache/assets/sprockets/v3.0/Im/Im4v1eeoDZ0y4slXwuhd6Gfbh3Ot5KdNYspGyBdUAHg.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 7e655d4..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/Im/Im4v1eeoDZ0y4slXwuhd6Gfbh3Ot5KdNYspGyBdUAHg.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"0processors:type=text/css&file_type=text/css;TTI"9file-digest://app/assets/stylesheets/application.css;TTI">processors:type=text/css&file_type=text/css&pipeline=self;TTI")file-digest://app/assets/stylesheets;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/LD/LDNBP5cotyi1f0BT4JexCk1uKg0jM1NJyo974NatUx8.cache b/tmp/cache/assets/sprockets/v3.0/LD/LDNBP5cotyi1f0BT4JexCk1uKg0jM1NJyo974NatUx8.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 0cbaaa5..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/LD/LDNBP5cotyi1f0BT4JexCk1uKg0jM1NJyo974NatUx8.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Mj/MjXrhpiObJ2Ts7clO-qazxNsme6bVCsP_xQrCXM7Psc.cache b/tmp/cache/assets/sprockets/v3.0/Mj/MjXrhpiObJ2Ts7clO-qazxNsme6bVCsP_xQrCXM7Psc.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 76ac724..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/Mj/MjXrhpiObJ2Ts7clO-qazxNsme6bVCsP_xQrCXM7Psc.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Nz/Nzg6Gy5uh2bM_cYLEZiTw8FC6gVrJO3xSpftNvRiFs8.cache b/tmp/cache/assets/sprockets/v3.0/Nz/Nzg6Gy5uh2bM_cYLEZiTw8FC6gVrJO3xSpftNvRiFs8.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 01e8768..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/Nz/Nzg6Gy5uh2bM_cYLEZiTw8FC6gVrJO3xSpftNvRiFs8.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"}app/assets/stylesheets/application.css?type=text/css&id=def162cb26d71790b7bc1e2e0332ac5511e0a9f4feaa586e8d352c481c7fe1e9:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Q8/Q8EjlHsSkMfMVo7szj2bYQISplM8lHMC3dGV7QNH5KA.cache b/tmp/cache/assets/sprockets/v3.0/Q8/Q8EjlHsSkMfMVo7szj2bYQISplM8lHMC3dGV7QNH5KA.cache[m
+[1mdeleted file mode 100644[m
+[1mindex a0c4043..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/Q8/Q8EjlHsSkMfMVo7szj2bYQISplM8lHMC3dGV7QNH5KA.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,3 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{[m
+[31m-I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"jprocessors:type=application/javascript&file_type=application/javascript&engines=.coffee&pipeline=self;TTI"áfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/QF/QFpfUL9osATrAlnQN6sHvyC0CVsOJLqty8FEPG2XzR0.cache b/tmp/cache/assets/sprockets/v3.0/QF/QFpfUL9osATrAlnQN6sHvyC0CVsOJLqty8FEPG2XzR0.cache[m
+[1mdeleted file mode 100644[m
+[1mindex d6f04b4..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/QF/QFpfUL9osATrAlnQN6sHvyC0CVsOJLqty8FEPG2XzR0.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"Á/home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee?type=application/javascript&pipeline=self&id=4cce2ca80a4316ef773a25e97de8e3b4fc5234f4e8ca8e6738495fa682952120:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Su/SuhtC6f7E2-1SXl4bkRvOKqhzFKTjPvbglVtjbjV6WQ.cache b/tmp/cache/assets/sprockets/v3.0/Su/SuhtC6f7E2-1SXl4bkRvOKqhzFKTjPvbglVtjbjV6WQ.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 0c6bb11..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/Su/SuhtC6f7E2-1SXl4bkRvOKqhzFKTjPvbglVtjbjV6WQ.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/TJ/TJs7FpM7rdbvRdgPbGtD-oF-4K0aIHynz_CU-S2hssA.cache b/tmp/cache/assets/sprockets/v3.0/TJ/TJs7FpM7rdbvRdgPbGtD-oF-4K0aIHynz_CU-S2hssA.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 2800ad3..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/TJ/TJs7FpM7rdbvRdgPbGtD-oF-4K0aIHynz_CU-S2hssA.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%„∞ƒBò¸ö˚Ù»ôoπ$'ÆA‰dõìL§ïôxR∏U[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Ts/Ts0EDEnsrMkn-FdMOxCeTdGBIDFJt0QXhvSMGhcj474.cache b/tmp/cache/assets/sprockets/v3.0/Ts/Ts0EDEnsrMkn-FdMOxCeTdGBIDFJt0QXhvSMGhcj474.cache[m
+[1mdeleted file mode 100644[m
+[1mindex dfde61e..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/Ts/Ts0EDEnsrMkn-FdMOxCeTdGBIDFJt0QXhvSMGhcj474.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"Üapp/assets/stylesheets/application.css?type=text/css&pipeline=self&id=63948222cd23e93fc3bd39cc2124c0e2e6fcc94d603ea8d5c5309cba1cd8f8cb:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/V4/V4b3quu_etrAOR6W0Gz9J7GFkxDBKLpm0-dD581AxvU.cache b/tmp/cache/assets/sprockets/v3.0/V4/V4b3quu_etrAOR6W0Gz9J7GFkxDBKLpm0-dD581AxvU.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 47e05f3..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/V4/V4b3quu_etrAOR6W0Gz9J7GFkxDBKLpm0-dD581AxvU.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%√˝˚“`≠Î◊/F∞ ‚Ñ◊	äœ–Y(}H—Rœ[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/WS/WSFc8SjCr_qOJga9Wxzsf2-io62ovKY1fJ38q91GujI.cache b/tmp/cache/assets/sprockets/v3.0/WS/WSFc8SjCr_qOJga9Wxzsf2-io62ovKY1fJ38q91GujI.cache[m
+[1mdeleted file mode 100644[m
+[1mindex bc1fd34..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/WS/WSFc8SjCr_qOJga9Wxzsf2-io62ovKY1fJ38q91GujI.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Wr/WrypqUrBkQFLFtpFfCTWem527Rm07AbH4fmP3WVQhIE.cache b/tmp/cache/assets/sprockets/v3.0/Wr/WrypqUrBkQFLFtpFfCTWem527Rm07AbH4fmP3WVQhIE.cache[m
+[1mdeleted file mode 100644[m
+[1mindex e92c942..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/Wr/WrypqUrBkQFLFtpFfCTWem527Rm07AbH4fmP3WVQhIE.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/X4/X44bXtBBjG3upjwxp_qSluj7R2-Oi6au9fG_nXH766I.cache b/tmp/cache/assets/sprockets/v3.0/X4/X44bXtBBjG3upjwxp_qSluj7R2-Oi6au9fG_nXH766I.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 47fe41a..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/X4/X44bXtBBjG3upjwxp_qSluj7R2-Oi6au9fG_nXH766I.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"îapp/assets/javascripts/application.js?type=application/javascript&pipeline=debug&id=a610b224edbd578665a098486bbbfb9385ec1bad49a838e93b0021fb5cea0974:ET[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/Z3/Z30bFfvqLalgqszxoD1JctJ8uqrMtx_wqsWwq8a12g4.cache b/tmp/cache/assets/sprockets/v3.0/Z3/Z30bFfvqLalgqszxoD1JctJ8uqrMtx_wqsWwq8a12g4.cache[m
+[1mdeleted file mode 100644[m
+[1mindex a811c91..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/Z3/Z30bFfvqLalgqszxoD1JctJ8uqrMtx_wqsWwq8a12g4.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%˝P«âNË}º‰N}çC~ewU”Qgk™‚Rí'[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/dF/dFIT_AgOJJKbu_cVWtEiEINw3z03ZMPRF9wrp3O6mws.cache b/tmp/cache/assets/sprockets/v3.0/dF/dFIT_AgOJJKbu_cVWtEiEINw3z03ZMPRF9wrp3O6mws.cache[m
+[1mdeleted file mode 100644[m
+[1mindex adbe127..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/dF/dFIT_AgOJJKbu_cVWtEiEINw3z03ZMPRF9wrp3O6mws.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/fW/fWHNjhwbq9ZC4D4_woLei387-o51j_6NryMIMySTl0s.cache b/tmp/cache/assets/sprockets/v3.0/fW/fWHNjhwbq9ZC4D4_woLei387-o51j_6NryMIMySTl0s.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 67decc5..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/fW/fWHNjhwbq9ZC4D4_woLei387-o51j_6NryMIMySTl0s.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/fY/FYyVMutj5Q4GapfC4i6sUgpFG4zSKvgQAuDDFxblIDI.cache b/tmp/cache/assets/sprockets/v3.0/fY/FYyVMutj5Q4GapfC4i6sUgpFG4zSKvgQAuDDFxblIDI.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 9ce6b7f..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/fY/FYyVMutj5Q4GapfC4i6sUgpFG4zSKvgQAuDDFxblIDI.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%µÇΩÃ≈ƒ$øPÖËÀpÍÓ>T?*Á¿"dlÓ∫.¢[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/fY/fY-rBMApMRqv4GM_cRgeqVFeM3QPeXkYEQqw6gaddIQ.cache b/tmp/cache/assets/sprockets/v3.0/fY/fY-rBMApMRqv4GM_cRgeqVFeM3QPeXkYEQqw6gaddIQ.cache[m
+[1mdeleted file mode 100644[m
+[1mindex f9e11be..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/fY/fY-rBMApMRqv4GM_cRgeqVFeM3QPeXkYEQqw6gaddIQ.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/kS/kSkCWaAJCcTgZ_AhrRCjZhNtkE12cubiq70uNtditqk.cache b/tmp/cache/assets/sprockets/v3.0/kS/kSkCWaAJCcTgZ_AhrRCjZhNtkE12cubiq70uNtditqk.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 3848d9d..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/kS/kSkCWaAJCcTgZ_AhrRCjZhNtkE12cubiq70uNtditqk.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,2 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{*I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"Lprocessors:type=application/javascript&file_type=application/javascript;TTI"8file-digest://app/assets/javascripts/application.js;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TTI"Åfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery.js;TTI"Öfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs.js;TTI"jprocessors:type=application/javascript&file_type=application/javascript&engines=.coffee&pipeline=self;TTI"áfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee;TTI"$file-digest://app/assets/images;TTI"+file-digest://app/assets/images/jquery;TTI")file-digest://app/assets/javascripts;TTI"0file-digest://app/assets/javascripts/jquery;TTI")file-digest://app/assets/stylesheets;TTI"0file-digest://app/assets/stylesheets/jquery;TTI",file-digest://vendor/assets/javascripts;TTI"3file-digest://vendor/assets/javascripts/jquery;TTI",file-digest://vendor/assets/stylesheets;TTI"3file-digest://vendor/assets/stylesheets/jquery;TTI"wfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts;TTI"~file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/jquery;TTI"|file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts;TTI"~file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery;TTI"/file-digest://app/assets/images/jquery_ujs;TTI"4file-digest://app/assets/javascripts/jquery_ujs;TTI"4file-digest://app/assets/stylesheets/jquery_ujs;TTI"7file-digest://vendor/assets/javascripts/jquery_ujs;TTI"7file-digest://vendor/assets/stylesheets/jquery_ujs;TTI"}file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/jquery_ujs;TTI"Çfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs;TTI"/file-digest://app/assets/images/turbolinks;TTI"4file-digest://app/assets/javascripts/turbolinks;TTI"4file-digest://app/assets/stylesheets/turbolinks;TTI"7file-digest://vendor/assets/javascripts/turbolinks;TTI"7file-digest://vendor/assets/stylesheets/turbolinks;TTI"}file-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/m7/m7HH_asSIkKszAqxGECfSFYZjyxLd9GRQxv0PFxJr1o.cache b/tmp/cache/assets/sprockets/v3.0/m7/m7HH_asSIkKszAqxGECfSFYZjyxLd9GRQxv0PFxJr1o.cache[m
+[1mdeleted file mode 100644[m
+[1mindex d0c0244..0000000[m
+Binary files a/tmp/cache/assets/sprockets/v3.0/m7/m7HH_asSIkKszAqxGECfSFYZjyxLd9GRQxv0PFxJr1o.cache and /dev/null differ
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/na/na1wVW68gzJVwRvLHJWAiHI-z8OSs2caYTFhJ-2xukw.cache b/tmp/cache/assets/sprockets/v3.0/na/na1wVW68gzJVwRvLHJWAiHI-z8OSs2caYTFhJ-2xukw.cache[m
+[1mdeleted file mode 100644[m
+[1mindex d214a84..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/na/na1wVW68gzJVwRvLHJWAiHI-z8OSs2caYTFhJ-2xukw.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%SÎ{ÜlÇnóçE!Ê≈ı•÷cpKbj∆Æ.\ó=[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/nk/nkPv4ezttvzghTm5koqE9Pm0jEjN6HvhtsEBhMX7mxE.cache b/tmp/cache/assets/sprockets/v3.0/nk/nkPv4ezttvzghTm5koqE9Pm0jEjN6HvhtsEBhMX7mxE.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 2800ad3..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/nk/nkPv4ezttvzghTm5koqE9Pm0jEjN6HvhtsEBhMX7mxE.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%„∞ƒBò¸ö˚Ù»ôoπ$'ÆA‰dõìL§ïôxR∏U[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/p-/p-T72B3pyKafQzRcAMcmU70X7I91w_io18z8PGsXdBc.cache b/tmp/cache/assets/sprockets/v3.0/p-/p-T72B3pyKafQzRcAMcmU70X7I91w_io18z8PGsXdBc.cache[m
+[1mdeleted file mode 100644[m
+[1mindex af18a0e..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/p-/p-T72B3pyKafQzRcAMcmU70X7I91w_io18z8PGsXdBc.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,3 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{[m
+[31m-I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TTI"Åfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery.js;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/pl/plzWN_8qZDkfwxV_KwDqSR2VkOCqoEC8qqchy7PTw7k.cache b/tmp/cache/assets/sprockets/v3.0/pl/plzWN_8qZDkfwxV_KwDqSR2VkOCqoEC8qqchy7PTw7k.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 93fc9de..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/pl/plzWN_8qZDkfwxV_KwDqSR2VkOCqoEC8qqchy7PTw7k.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1,3 +0,0 @@[m
+[31m-[o:Set:[m
+[31m-@hash{[m
+[31m-I"environment-version:ETTI"environment-paths;TTI"rails-env;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TTI"Öfile-digest:///home/vagrant/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/jquery-rails-4.1.1/vendor/assets/javascripts/jquery_ujs.js;TT[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/rp/rp7NrhMIY_nFGbEq89nJJk_gMXyUmyVSIDFanC8JurQ.cache b/tmp/cache/assets/sprockets/v3.0/rp/rp7NrhMIY_nFGbEq89nJJk_gMXyUmyVSIDFanC8JurQ.cache[m
+[1mdeleted file mode 100644[m
+[1mindex e8cc9a1..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/rp/rp7NrhMIY_nFGbEq89nJJk_gMXyUmyVSIDFanC8JurQ.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%•å∫Œ"m≈Jó·⁄S•˙EÙj!Ù/d¸]–/[ª∞ [m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/sn/sn3rzrC5pOGFMtbb1DDjh172w2fFyHHi4UwO6bJhPbo.cache b/tmp/cache/assets/sprockets/v3.0/sn/sn3rzrC5pOGFMtbb1DDjh172w2fFyHHi4UwO6bJhPbo.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 7aaf37d..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/sn/sn3rzrC5pOGFMtbb1DDjh172w2fFyHHi4UwO6bJhPbo.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%±ﬂRm«v≥S3.£åOÓLœ˝Ÿ⁄πcÇ∆ïqÅ=_j√[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/vT/vThz4r6nhqIH-Tz6PkpEq0jHieekDjrI-WE2-Mn-7Po.cache b/tmp/cache/assets/sprockets/v3.0/vT/vThz4r6nhqIH-Tz6PkpEq0jHieekDjrI-WE2-Mn-7Po.cache[m
+[1mdeleted file mode 100644[m
+[1mindex 924ea8c..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/vT/vThz4r6nhqIH-Tz6PkpEq0jHieekDjrI-WE2-Mn-7Po.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-"%Ëx–œDâÆ±ªrà`$Ëﬁg˝€i?‡&˛9XSÕ[m
+\ No newline at end of file[m
+[1mdiff --git a/tmp/cache/assets/sprockets/v3.0/yK/yKM38hms5lE3jKyX4gkw9zKqLpXuXwLrn5oTmfOCKuo.cache b/tmp/cache/assets/sprockets/v3.0/yK/yKM38hms5lE3jKyX4gkw9zKqLpXuXwLrn5oTmfOCKuo.cache[m
+[1mdeleted file mode 100644[m
+[1mindex c4d3801..0000000[m
+[1m--- a/tmp/cache/assets/sprockets/v3.0/yK/yKM38hms5lE3jKyX4gkw9zKqLpXuXwLrn5oTmfOCKuo.cache[m
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-I"ìapp/assets/javascripts/application.js?type=application/javascript&pipeline=self&id=87cb1710dcbc0557daff63f59e259bcfd97074184c664bc806b69003c2e98052:ET[m
+\ No newline at end of file[m
