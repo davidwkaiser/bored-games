@@ -53,7 +53,7 @@ results.each do |stuff|
 		puts "Added #{game.votes.count} votes to #{title}."
 
 		mechanics.each do |mechanic|
-			game.mechanics.find_or_create_by(description: mechanic)
+			game.mechanics << Mechanic.find_or_create_by(description: mechanic)
 		end
 
 		puts "#{title} added."
@@ -61,5 +61,5 @@ results.each do |stuff|
 		puts "There was bug in the system"
 	end
 
-	sleep 0.2
+	sleep 0.05
 end
