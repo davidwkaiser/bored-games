@@ -49,3 +49,7 @@ group :development do
   gem 'spring'
 end
 
+group :prodction do 
+	gem 'rails_12factor'
+	gem 'puma'
+end
