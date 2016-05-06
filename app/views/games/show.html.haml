@@ -21,3 +21,7 @@
   %ul.mechanics
     - @game.mechanics.each do |mechanic|
       %li= mechanic.description
+  .comment-section
+    = render @game.comments
+
+  = link_to "Add comment", new_game_comment_path(game_id: @game.id)
