@@ -9,6 +9,7 @@
     %h4.description-title Description
     %p= raw game.description
   %p.read-more= link_to "Read more about this game!", game
-  %p.comment-count
-    %p= game.comments.count.to_s+" comments"
+  .this-funny-div
+    %p.clickable= pluralize(game.comments.count, "comment")
+
 

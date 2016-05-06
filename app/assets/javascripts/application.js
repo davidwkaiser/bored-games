@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $("div.this-funny-div").on("click", ".clickable", function() {
+    var request = $.get('/games')
+    request.done(function(thing) {
+      alert(thing);
+    })
+  })
+})
