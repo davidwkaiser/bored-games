@@ -5,19 +5,30 @@ class VotesController < ApplicationController
 		if current_user.games.include?(@game)
 			@vote = current_user.votes.new(voteable: @game)
 			if @vote.save
-				@game
+				respond_to do |format|
+					format.js { @game }
+					format.html do 
+						flash[:notice] = ["Point added!"]
+						redirect_to @game
+					end
+				end
 			else
-				redirect_to @game
+				respond_to do |format|
+					format.js { render 'error' }
+					format.html do
+						flash[:errors] = ["Something went wrong.", "Make sure you're logged in and this game is in your library."]
+						redirect_to @game
+					end
+				end
 			end
 		else
 			respond_to do |format|
 				format.js { render 'error' }
-				format.html  do
-					flash[:error] = ["You can only vote on games in your library!"]
+				format.html do
+					flash[:errors] = ["Something went wrong.", "Make sure you're logged in and this game is in your library."]
 					redirect_to @game
 				end
 			end
 		end
 	end
-
 end

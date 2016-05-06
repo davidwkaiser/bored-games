@@ -1,11 +1,16 @@
 class RelationshipsController < ApplicationController
   def create
     user = User.find(params[:user_id])
-    relationship = current_user.sent_relationships.new(receiver: user)
-    if relationship.save
-      redirect_to user
+    if current_user && !current_user.friend_requests.include?(user)
+      relationship = current_user.sent_relationships.new(receiver: user)
+      if relationship.save
+        redirect_to user
+      else
+        flash[:errors] = ["Already sent request!"]
+        redirect_to user #the target's original page
+      end
     else
-      flash[:errors] = ["Already sent request!"]
+      flash[:errors] = ["Request already exists in your inbox."]
       redirect_to user #the target's original page
     end
   end

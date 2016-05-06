@@ -58,4 +58,10 @@ class User < ActiveRecord::Base
     end
     false
   end
+
+  def destroy_data
+    self.received_relationships.destroy_all
+    self.sent_relationships.destroy_all
+    self.comments.destroy_all
+  end
 end
