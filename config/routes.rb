@@ -8,7 +8,12 @@ Rails.application.routes.draw do
     resources :relationships
     resources :games
   end
-  resources :games
+
+  resources :games do
+    resources :comments
+  end
+
+  resources :comments
   resources :additions
   resources :votes
   resources :mechanics
