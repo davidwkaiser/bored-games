@@ -9,14 +9,15 @@
     %p= "Published: #{@game.year_published}"
 
   .buttons
-    - if @vote
-      - if @vote.errors.any
-        = @vote.errors.full_messages
+    #errors-div
+      - if flash[:error]
+        - flash[:error].each do |msg|
+          %p= msg
     - if current_user && !current_user.games.include?(@game)
       = link_to "Add to Library", additions_path(game_id: @game.id), method: :post
     - elsif current_user && current_user.games.include?(@game)
       = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
-    = button_to "Vote!", votes_path(voteable_id: @game.id), method: :post
+    = button_to "Vote!", votes_path(voteable_id: @game.id), method: :post, remote: true
 
   %p.description-header Description
   .description-text= raw @game.description
@@ -27,4 +28,4 @@
   .comment-section
     = render @game.comments
 
-  
+
