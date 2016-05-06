@@ -13,8 +13,13 @@ class VotesController < ApplicationController
 					end
 				end
 			else
-				flash[:errors] = ["Something went wrong.", "Make sure you're logged in and this game is in your library."]
-				redirect_to @game
+				respond_to do |format|
+					format.js { render 'error' }
+					format.html do
+						flash[:errors] = ["Something went wrong.", "Make sure you're logged in and this game is in your library."]
+						redirect_to @game
+					end
+				end
 			end
 		else
 			respond_to do |format|
@@ -26,5 +31,4 @@ class VotesController < ApplicationController
 			end
 		end
 	end
-
 end

@@ -19,6 +19,10 @@
  #C8D2F5
  */
 
+.this-funny-div {
+	float: right;
+}
+
 .new_user input, .edit_user input, .login-form input {
 	display: block;
 	margin-top: 1em;
@@ -27,6 +31,7 @@
 	margin-left: 30%;
 	width: 40%;
 	font-size: 1.2em;
+	font-family: 'Fresca', sans-serif;
 }
 
 .button_to {
@@ -52,7 +57,7 @@
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: 'Fresca', sans-serif;
 	font-size:20px;
 	font-weight:bold;
 	padding:13px 32px;
@@ -77,6 +82,7 @@
 
 
 .navigation {
+	font-size: 1.8em;
 	width: 100%;
 	text-align: center;
 }
@@ -91,10 +97,11 @@
 }
 
 body {
+	font-family: 'Fresca', sans-serif;
 	background-color: #AFA9FF;
 	color: #57256F;
-	text-shadow: 0.5px -1px black;
-	font-size: 1.1em;
+	text-shadow: 1px 1px black;
+	font-size: 1.4em;
 }
 
 a {
@@ -128,6 +135,8 @@ nav a {
 }
 
 .title {
+	font-family: 'Chicle', cursive;
+	font-size: 3em;
 	margin-bottom: 0;
 	margin-top: 0.5em;
 }
@@ -216,7 +225,12 @@ header nav {
 	font-size: 1em;
 }
 
-.game-listing .stats {
+.game-stuff {
+	width: 100%;
+	height: 250px;
+}
+
+.game-stuff .stats {
 	text-align: center;
 	float: left;
 	clear: left;
@@ -228,7 +242,6 @@ header nav {
 .stats {
 	margin-top: 2em;
 	background-color: #9F83AB;
-	height: 100%;
 	margin-left: 1%;
 	border: 1px solid black;
 	border-radius: 1em 1em 1em 1em;
@@ -242,10 +255,6 @@ header nav {
 	width: 100%;
 	margin-bottom: 0;
 	margin-top: 0;
-}
-
-.stats a, .game-listing a {
-	text-decoration: none;
 }
 
 .description-text, .read-more, .comment-count{
@@ -278,7 +287,8 @@ header nav {
 	text-align: center;
 }
 
-.game-info h1, .game-info img, .game-info h4 {
+.top-section h1, .game-info img, .top-section h4 {
+	font-size: 1.2em;
 	text-align: left;
 	width: 20%;
 }
@@ -364,7 +374,7 @@ header nav {
 
 
 .top-section {
-	height: 300px;
+	height: 350px;
 	width: 100%;
 }
 
@@ -374,4 +384,25 @@ header nav {
 
 .game-comments {
 	display: none;
+}
+
+.game-listing{
+	height: auto;
+}
+.this-funny-div {
+	width: 100%;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.game-comments .comment{
+	width: 60%;
+	text-align: justify;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: #9F83AB;
+	border-radius: 1em;
+	font-size: 1.3em;
 }
