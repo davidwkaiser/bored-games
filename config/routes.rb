@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'games/names' => 'games#names'
   get 'games/popularity' => 'games#popularity'
-
+  post 'games/mechanics' => 'games#mechanics'
 
   resources :users do
     resources :relationships
