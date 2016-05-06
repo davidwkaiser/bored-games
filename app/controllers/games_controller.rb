@@ -3,6 +3,11 @@ class GamesController < ApplicationController
     # @games = Game.all
     @games = Game.paginate(:page => params[:page], :per_page => 10)
     @mechanics = Mechanic.top_mechanics
+    # if response.xhr?
+    #   render plain: "OK"
+    # else
+    #   render :index
+    # end
   end
 
   def show
@@ -28,9 +33,7 @@ class GamesController < ApplicationController
         @games << mechanic.games
       end
     end
-    # @games = Game.joins(:mechanics).group("mechanic.id").order('name ASC')
     @games.uniq!
-    # @games = @games.paginate(:page => params[:page], :per_page => 10)
     @mechanics = Mechanic.top_mechanics
   end
 

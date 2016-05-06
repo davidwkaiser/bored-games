@@ -1,11 +1,11 @@
 .edit-user-form
-  - if flash[:errors]
-    - flash[:errors].each do |msg|
-      %li= msg
   = form_for @user do |f|
-    = f.text_field :username, placeholder: @user.username
-    = f.text_field :password, placeholder: "password"
-    = f.text_field :password_confirmation, placeholder: "confirm password"
+    = f.label :username
+    = f.text_field :username
+    = f.label :password
+    = f.password_field :password
+    = f.label :confirm_password
+    = f.password_field :password_confirmation
     = f.submit
 
 
