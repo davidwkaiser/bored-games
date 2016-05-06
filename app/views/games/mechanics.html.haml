@@ -1,5 +1,5 @@
 %h1.page-title List of Games
-.navigation= will_paginate @games
+/ .navigation= will_paginate @games
 .sort-by
   %h1 Sort By:
   = link_to "A-Z", '/games/names'
@@ -9,5 +9,6 @@
       = render @mechanics
       = submit_tag 'Filter'
 .games-list
-  = render @games
-.navigation= will_paginate @games
+  - @games.each do |game|
+    = render game
+/ .navigation= will_paginate @games

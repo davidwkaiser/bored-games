@@ -6,4 +6,6 @@ class MechanicsController < ApplicationController
     p @games
   end
 
+
+
 end
