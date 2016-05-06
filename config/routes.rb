@@ -1,18 +1,29 @@
 Rails.application.routes.draw do
 
+  get 'games/names' => 'games#names'
+  get 'games/popularity' => 'games#popularity'
+
+
   resources :users do
     resources :relationships
     resources :games
   end
-  resources :games
+
+  resources :games do
+    resources :comments
+  end
+
+  resources :comments
   resources :additions
+  resources :votes
+  resources :mechanics
 
   root "games#index"
 
   get   'login' =>  'sessions#new'
   post  'login' =>  'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

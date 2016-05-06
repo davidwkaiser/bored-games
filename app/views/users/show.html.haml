@@ -15,7 +15,7 @@
     = button_to 'Delete', @user, method: :delete, data: {confirm: "Are you sure?"}
 
   - if current_user != @user && !current_user.is_friend?(@user)
-    = button_to 'Add Friend', user_relationships_path(@user)
+    %h4= button_to 'Add Friend', user_relationships_path(@user)
 
   - if current_user.is_friend?(@user) || current_user == @user
     %h3 Friends
@@ -41,9 +41,6 @@
               %li= button_to 'Accept Friend', user_relationship_path(@user.id, request_id), method: :put
 
     %h3 Game Library
-    %ul
-      - if @user.games
-        - @user.games.each do |game|
-          %li
-            %h4= link_to "#{game.name}", game
-
+    - if @user.games
+      - @user.games.each do |game|
+        %h4= link_to "#{game.name}", game

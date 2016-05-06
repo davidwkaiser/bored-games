@@ -1,0 +1,4 @@
+%h1= "List of Games in the #{@mechanic.description} category"
+.games-list
+  = render @games
+  = will_paginate @games

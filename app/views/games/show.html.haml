@@ -7,12 +7,21 @@
   - elsif current_user && current_user.games.include?(@game)
     .button
       = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
-  %ul.description
-    %li= "Time to Play: #{@game.play_time} minutes"
-    %li= "Players: #{@game.min_players} - #{@game.max_players}"
-    %li= "Published: #{@game.year_published}"
+  .description
+    - if @vote
+      - if @vote.errors.any
+        = @vote.errors.full_messages
+    = link_to "Vote!", votes_path(voteable_id: @game.id), method: :post
+    %p Votes: #{@game.votes.count}
+    %p= "Time to Play: #{@game.play_time} minutes"
+    %p= "Players: #{@game.min_players} - #{@game.max_players}"
+    %p= "Published: #{@game.year_published}"
   %h4 Description
-  %p= @game.description
+  %p.description-text= raw @game.description
   %ul.mechanics
     - @game.mechanics.each do |mechanic|
       %li= mechanic.description
+  .comment-section
+    = render @game.comments
+
+  = link_to "Add comment", new_game_comment_path(game_id: @game.id)

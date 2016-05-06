@@ -6,4 +6,6 @@ class Game < ActiveRecord::Base
   has_many :votes, as: :voteable
   has_many :additions
   has_many :users, through: :additions
+  has_many :votes, as: :voteable
+  has_many  :comments
 end

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
   validates :username, :password, presence: true
   ### Uncomment associations as they are created
+  has_many :votes
   has_many :additions
   has_many :games, through: :additions
   has_many :votes
@@ -15,6 +16,8 @@ class User < ActiveRecord::Base
   has_many :requested_friends, through: :sent_relationships, source: :receiver
   has_many :friend_requests, through: :received_relationships, source: :sender
 
+  has_many  :comments
+
   def friends
     friends = []
     Relationship.where(sender: self, status: true).each do |rel|
@@ -24,8 +27,6 @@ class User < ActiveRecord::Base
       friends << rel.sender
     end
     friends
-    # friends = self.requested_friends + self.friend_requests
-    # friends.uniq!
   end
 
   def pending_friends
@@ -47,14 +48,6 @@ class User < ActiveRecord::Base
     requests
   end
 
-  # def self.send_request(user1, user2)#user_id
-  #   validate = user1.is_friend?(user2)
-  #   if validate == false
-  #     new_relationship = Relationship.new(sender: user1, receiver: user2, status: false)
-  #     return new_relationship.save
-  #   end
-  # end
-
   def request(sender)
     Relationship.where(sender: sender, receiver: self, status: false)
   end
@@ -65,8 +58,4 @@ class User < ActiveRecord::Base
     end
     false
   end
-
-  # def games
-  #   Game.all
-  # end
 end

@@ -1,0 +1,4 @@
+.new-comment-form
+  = form_for [@game, Comment.new] do |f|
+    = f.text_field :body, placeholder: "Comment"
+    = f.submit
