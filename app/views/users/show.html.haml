@@ -1,17 +1,10 @@
 .user-profile
-  - if flash[:notice]
-    %ul.notices
-    - flash[:notice].each do |note|
-      %li= note
-  - if flash[:errors]
-    %ul.errors
-    - flash[:errors].each do |err|
-      %li= err
+
   %h1= @user.username
 
   - if current_user == @user
-    = link_to 'Edit', edit_user_path(@user)
-    = button_to 'Delete', @user, method: :delete, data: {confirm: "Are you sure?"}
+    = button_to 'Edit username/password', edit_user_path(@user)
+    = button_to 'Delete your profile', @user, method: :delete, data: {confirm: "Are you sure?"}
 
   - if current_user != @user && !current_user.is_friend?(@user) && !current_user.friends.include?(@user)
     %h4= button_to 'Add Friend', user_relationships_path(@user)
