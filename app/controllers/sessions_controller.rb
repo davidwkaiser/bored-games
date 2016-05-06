@@ -6,14 +6,20 @@ class SessionsController < ApplicationController
     if @user
       if @user.authenticate(password)
         session[:user_id] = @user.id
+
+        # add a welcome message to the flash hash
+        flash[:notice] = ["Welcome #{@user.name}!"]
+
         current_user = @user
         redirect_to @user
       else
+        # add error handling to the flash hash
         flash[:errors] = ["Incorrect username/password combination"]
         redirect_to '/login'
       end
     else
-      flash[:errors] = ["Could not find user with that name"]
+      # add error handling to the flash hash
+      flash[:errors] = ["Incorrect username/password combination"]
       redirect_to '/login'
     end
   end

@@ -1,0 +1,21 @@
+
+
+Started GET "/" for ::1 at 2016-05-06 07:53:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GamesController#index as HTML
+  [1m[35mGame Load (2.1ms)[0m  SELECT  "games".* FROM "games" LIMIT 10 OFFSET 0
+  [1m[36m (3.1ms)[0m  [1mSELECT COUNT(*) FROM "games"[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1  [["game_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1[0m  [["game_id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1  [["game_id", 3]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1[0m  [["game_id", 4]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1  [["game_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1[0m  [["game_id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1  [["game_id", 7]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1[0m  [["game_id", 8]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1  [["game_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."game_id" = $1[0m  [["game_id", 10]]
+  Rendered games/_game.html.haml (109.9ms)
+  Rendered games/index.html.haml within layouts/application (205.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1569ms (Views: 1504.1ms | ActiveRecord: 27.6ms)
