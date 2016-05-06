@@ -44,7 +44,7 @@ results.each do |stuff|
 												max_players: max_players,
 												year_published: published})
 
-		random_number = rand(1..500)
+		random_number = rand(1..800)
 
 		random_number.times do 
 			game.votes.find_or_create_by(user_id: rand(500..5000))
@@ -61,5 +61,4 @@ results.each do |stuff|
 		puts "There was bug in the system"
 	end
 
-	sleep 0.05
 end

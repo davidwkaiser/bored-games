@@ -2,8 +2,8 @@
 .navigation= will_paginate @games
 .sort-by
   %h1 Sort By:
-  = link_to "A-Z", '/games/names'
-  = link_to "Hot", '/games/popularity'
+  = button_to "A-Z", '/games/names', method: :get
+  = button_to "Hot", '/games/popularity', method: :get
   .mechanic-box
     = form_tag '/games/mechanics' do
       = render @mechanics

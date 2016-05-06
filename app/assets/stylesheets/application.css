@@ -18,6 +18,18 @@
  #CF9FE3
  #C8D2F5
  */
+.sort-by {
+	text-align: center;
+}
+
+.mechanics-box {
+  display: inline-block;
+  text-align: center;
+}
+
+.mechanic-box .button_to {
+	height: 6px;
+}
 
 .this-funny-div {
 	float: right;
@@ -352,8 +364,8 @@ header nav {
 }
 .game-headers img {
 	width: auto;
-	max-width: 280px;
-	height: 150px;
+	max-width: 370px;
+	max-height: 225px;
 }
 
 .user-buttons .button_to input{
