@@ -8,18 +8,20 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
 
         # add a welcome message to the flash hash
-        flash[:notice] = ["Welcome #{@user.name}!"]
+        flash[:notice] = ["Welcome #{@user.username}!"]
 
         current_user = @user
         redirect_to @user
       else
         # add error handling to the flash hash
         flash[:errors] = ["Incorrect username/password combination"]
+        
         redirect_to '/login'
       end
     else
       # add error handling to the flash hash
       flash[:errors] = ["Incorrect username/password combination"]
+
       redirect_to '/login'
     end
   end
@@ -27,6 +29,10 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     current_user = nil
+
+    # add logout message
+    flash[:notice] = ["You have been logged out."]
+
     redirect_to root_path #game index
   end
 

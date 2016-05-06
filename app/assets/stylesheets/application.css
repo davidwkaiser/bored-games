@@ -19,6 +19,16 @@
  #C8D2F5
  */
 
+.navigation {
+	width: 100%;
+	text-align: center;
+}
+
+.notices, .errors {
+	padding-top: 1em;
+	width: 100%;
+	text-align: center;
+}
 
 body {
 	background-color: #AFA9FF;
@@ -125,7 +135,7 @@ input {
 	width: 100%;
 	float: left;
 	text-align: left;
-	padding-bottom: 1em;
+	margin-bottom: 1em;
 	background-color: #EACAFF;
 }
 
@@ -141,7 +151,7 @@ input {
 	-webkit-box-shadow: 0 10px 10px -0px #6153BF;
 	-moz-box-shadow: 0 10px 10px -0px #6153BF;
 	box-shadow: 0 10px 10px -0px #6153BF;
-	margin-top: 4em;
+	margin-top: 1em;
 	font-size: 1.3em;
 	vertical-align: middle;
 	color: #564BD4;

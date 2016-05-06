@@ -16,7 +16,14 @@
             %li= button_to 'Logout', "/logout", method: :delete
           -else
             %li= link_to "Register", '/users/new'
-            %li= link_to "Login", "/login"
+            %li= link_to "Login", "/login"                   
     .container
-              
+      - if flash[:notice]
+        .notices
+          - flash[:notice].each do |note|
+            %p= note
+      - if flash[:errors]
+        .errors
+          - flash[:errors].each do |err|
+            %p= err 
       = yield

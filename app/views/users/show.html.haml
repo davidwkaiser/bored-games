@@ -1,13 +1,5 @@
 .user-profile
-  / Display any flash messages or errors
-  - if flash[:notice]
-    %ul.notices
-    - flash[:notice].each do |note|
-      %li= note
-  - if flash[:errors]
-    %ul.errors
-    - flash[:errors].each do |err|
-      %li= err
+
   %h1= @user.username
 
   - if current_user == @user

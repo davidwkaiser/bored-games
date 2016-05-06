@@ -1,7 +1,4 @@
 .new-user-form
-  - if flash[:errors]
-    - flash[:errors].each do |msg|
-      %li= msg
   = form_for @user do |f|
     = f.label :username
     = f.text_field :username

@@ -1,9 +1,4 @@
 .login-form
-  - if flash[:errors]
-    - if flash[:errors].any?
-      %ul
-      - flash[:errors].each do |msg|
-        %li= msg
   = form_for(:user, url: login_path) do |f|
     = f.label :username
     = f.text_field :username
