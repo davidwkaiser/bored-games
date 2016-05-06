@@ -3,9 +3,10 @@ class GamesController < ApplicationController
   def index
     # @games = Game.all
     @games = Game.paginate(:page => params[:page], :per_page => 10)
-    respond_to do |format|
-      format.html
-      format.js { render 'comments/comment', layout: false, locals: { comment: Comment.new } }
+    if response.xhr?
+      render plain: "OK"
+    else
+      render :index
     end
   end
 

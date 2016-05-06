@@ -10,6 +10,6 @@
     %p= raw game.description
   %p.read-more= link_to "Read more about this game!", game
   .this-funny-div
-    %p.clickable= pluralize(game.comments.count, "comment")
+    = link_to pluralize(game.comments.count, "comment"), games_path, remote: true
 
 
