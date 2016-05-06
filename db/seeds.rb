@@ -36,7 +36,7 @@ results.each do |stuff|
 		image_link = game_data.css('image').text
 		mechanics = game_data.css("link").select { |link| link[:type] == "boardgamemechanic" }.map { |link| link[:value] }
 
-		game = Game.create({name: title,
+		game = Game.find_or_create_by({name: title,
 												description: description,
 												play_time: play_time,
 												image_url: image_link,
