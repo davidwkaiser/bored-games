@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      flash[:notice] = ["Account created!"]
       session[:user_id] = @user.id
       redirect_to @user
     else
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
   def update
     @user=User.find(params[:id])
     if @user.update(user_params)
+      flash[:notice] = ["Account updated!"]
       redirect_to @user
     else
       flash[:errors] = @user.errors.full_messages
@@ -35,9 +37,10 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    puts "yay"
+    @user.destroy_data
     if @user.destroy
-      redirect_to new_user_path
+      flash[:notice] = ["Account deleted."]
+      redirect_to root_path
     else
       redirect_to @user
       # redirect_to root

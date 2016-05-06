@@ -2,6 +2,8 @@
 %html
   %head
     %title Boredgames
+    = stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Chicle'
+    = stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Fresca'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -9,14 +11,13 @@
     %header
       %h1.title Bored? Games!
       %nav
-        %ul
-          %li= link_to "Home", root_path
-          -if current_user
-            %li= link_to current_user.username, current_user
-            %li= button_to 'Logout', "/logout", method: :delete
-          -else
-            %li= link_to "Register", '/users/new'
-            %li= link_to "Login", "/login"                   
+        %span= button_to "Home", root_path, method: :get
+        -if current_user
+          %span= button_to current_user.username, current_user, method: :get
+          %span= button_to 'Logout', "/logout", method: :delete
+        -else
+          %span= button_to "Register", '/users/new', method: :get
+          %span= button_to "Login", "/login", method: :get                   
     .container
       - if flash[:notice]
         .notices

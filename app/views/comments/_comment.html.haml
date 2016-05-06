@@ -1,3 +1,3 @@
 .comment
   %p= comment.body
-  %h5= "by #{comment.user.username}"
+  %h5= link_to "by #{comment.user.username}", comment.user
