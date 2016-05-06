@@ -9,7 +9,9 @@
     %h4.description-title Description
     %p= raw game.description
   %p.read-more= link_to "Read more about this game!", game
-  .this-funny-div[game]
+  .this-funny-div
     = link_to pluralize(game.comments.count, "comment"), game_path(game), remote: true
+    .game-comments[game]
+      = render game.comments
 
 
