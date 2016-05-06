@@ -5,6 +5,7 @@
       if current_user
         @comment = @game.comments.new(user_id: current_user.id, game_id: @game.id)
       else
+        flash[:errors] = ["You must be logged in to comment!"]
         redirect_to game_path(@game)
       end
     end
