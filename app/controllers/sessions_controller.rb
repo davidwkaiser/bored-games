@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   def destroy
     session.delete(:user_id)
     current_user = nil
-    redirect_to '/users/new' #game index
+    redirect_to root_path #game index
   end
 
   private
