@@ -352,8 +352,8 @@ header nav {
 }
 .game-headers img {
 	width: auto;
-	max-width: 280px;
-	height: 150px;
+	max-width: 370px;
+	max-height: 225px;
 }
 
 .user-buttons .button_to input{
