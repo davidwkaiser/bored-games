@@ -12,10 +12,30 @@
  *
  *= require_tree .
  *= require_self
+
+ #837F84
+ #735C9D
+ #CF9FE3
+ #C8D2F5
  */
 
+
 body {
-	background-color: #C2BDFF;
+	background-color: #AFA9FF;
+	color: #57256F;
+	text-shadow: 0.5px -1px black;
+	font-size: 1.1em;
+}
+
+a {
+	color: #0847D0;
+	text-shadow: 0.5px -1px #251735;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #1D6EC0;
+	text-shadow: 0.5px -1px #251735;
 }
 
 img {
@@ -31,6 +51,8 @@ nav ul {
 nav li {
 	text-align: center;
 	display: inline;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 nav a {
@@ -50,7 +72,7 @@ nav a {
 header, header nav {
 	margin: 0;
 	text-align: center;
-	background-color: #E5B5F5;
+	background-color: #EACAFF;
 	display: inline-block;
 	border-radius: 30px;
 }
@@ -59,9 +81,9 @@ header {
 	width: 30%;
 	margin-right: 35%;
 	margin-left: 35%;
-	-webkit-box-shadow: -15px 15px 35px -5px black;
-	-moz-box-shadow: -15px 15px 35px -5px black;
-	box-shadow: -15px 15px 35px -5px black;
+	-webkit-box-shadow: 0 10px 10px -0px #6153BF;
+	-moz-box-shadow: 0 10px 10px -0px #6153BF;
+	box-shadow: 0 10px 10px -0px #6153BF;
 }
 
 header nav {
@@ -83,9 +105,9 @@ input {
 	display: block;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	margin-right: 10%;
-	margin-left: 10%;
-	width: 80%;
+	margin-right: 30%;
+	margin-left: 30%;
+	width: 40%;
 	font-size: 1.2em;
 }
 
@@ -96,18 +118,15 @@ input {
 
 .game-listing, .user-profile, .game-info {
 	border-radius: 30px;
-	-webkit-box-shadow: -15px 15px 35px -5px black;
-	-moz-box-shadow: -15px 15px 35px -5px black;
-	box-shadow: -15px 15px 35px -5px black;
+	-webkit-box-shadow: 0 10px 10px -0px #6153BF;
+	-moz-box-shadow: 0 10px 10px -0px #6153BF;
+	box-shadow: 0 10px 10px -0px #6153BF;
 	margin-top: 1em;
-	vertical-align: middle;
-	color: #564BD4;
 	width: 100%;
 	float: left;
-	border: 1px solid black;
 	text-align: left;
 	padding-bottom: 1em;
-	background-color: #ffffff;
+	background-color: #EACAFF;
 }
 
 .user-profile {
@@ -117,17 +136,11 @@ input {
 	margin-right: 30%;
 }
 
-.user-profile input {
-	margin-left: 40%;
-	margin-right:40%;
-	width: 20%;
-}
-
-.login-form, .new-user-form, .edit-user-form {
+.login-form, .new-user-form, .edit-user-form, .new-comment-form {
 	border-radius: 30px;
-	-webkit-box-shadow: -15px 15px 35px -5px black;
-	-moz-box-shadow: -15px 15px 35px -5px black;
-	box-shadow: -15px 15px 35px -5px black;
+	-webkit-box-shadow: 0 10px 10px -0px #6153BF;
+	-moz-box-shadow: 0 10px 10px -0px #6153BF;
+	box-shadow: 0 10px 10px -0px #6153BF;
 	margin-top: 4em;
 	font-size: 1.3em;
 	vertical-align: middle;
@@ -136,11 +149,17 @@ input {
 	margin-left: 30%;
 	width: 40%;
 	float: left;
-	border: 1px solid black;
 	text-align: center;
 	padding-bottom: 1em;
 	padding-top: 1em;
-	background-color: #ffffff;
+	background-color: #EACAFF;
+}
+
+.new-comment-form textarea {
+	height: 7em;
+	width: 90%;
+	border-radius: 5px;
+	font-size: 1em;
 }
 
 .game-listing .stats {
@@ -152,24 +171,38 @@ input {
 	display: inline;
 }
 
+.stats {
+	margin-top: 2em;
+	background-color: #9F83AB;
+	height: 100%;
+	margin-left: 1%;
+	border: 1px solid black;
+	border-radius: 1em 1em 1em 1em;
+	margin-bottom: 2em;
+	padding-right: 0.5em;
+}
+
 .stats h3, .stats img, .stats p {
 	margin-top: 5px;
 	margin-bottom: 0;
 	width: 100%;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .stats a, .game-listing a {
 	text-decoration: none;
 }
 
-.description-text, .read-more {
-	padding-top: 2em;
+.description-text, .read-more, .comment-count{
 	display: inline;
 	float: right;
 	text-align: justify;
-	width: 80%;
-	padding-right: 2.5%;
+	width: 78%;
+	padding-right: 2%;
 	vertical-align: middle;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .read-more {
@@ -187,17 +220,81 @@ input {
 	text-align: left;
 }
 
-.game-info h1, .game-info img, .game-info .button, .game-info .description, .game-info h4 {
+.page-title {
+	text-align: center;
+}
+
+.game-info h1, .game-info img, .game-info h4 {
+	text-align: left;
+	width: 20%;
+}
+
+.description {
+	text-align: center;
+}
+
+.game-info h4 {
+	font-size: 1.5em;
+	text-align: center;
+	width: 100%;
+}
+
+.game-info .description-text, .mechanics, .comment, .buttons {
+	width: 80%;
+	text-align: justify;
+	margin-left: 8%;
+	margin-right: 8%;
+	padding-right: 2%;
+	padding-left: 2%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: #9F83AB;
+	border-radius: 1em;
+	font-size: 1.3em;
+}
+
+.buttons {
 	text-align: center;
 	width: 20%;
 	margin-left: 40%;
 	margin-right: 40%;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.game-info .description-text, .mechanics {
-	width: 80%;
-	text-align: justify;
-	margin-left: 12%;
-	margin-right: 8%;
+.game-headers {
+	float: left;
+	width: 30%;
+	margin-left: 20%;
+	font-size: 2em;
 }
+
+.description-header {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.game-headers p {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.game-headers img {
+	width: 70%;
+}
+
+
+.mechanics, .add-comment {
+	text-align: center;
+}
+
+.add-comment {
+	height: 10px;
+}
+
+.add-comment, .comment-section {
+	padding-top: 1em;
+}
+
 
