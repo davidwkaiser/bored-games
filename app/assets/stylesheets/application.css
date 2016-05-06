@@ -158,7 +158,7 @@ header nav {
 	margin-right: 10%;
 	margin-left: 10%;
 	width: 80%;
-	
+
 }
 
 .login-form, .new-user-form, .edit-user-form {
@@ -362,6 +362,7 @@ header nav {
 	padding-top: 1em;
 }
 
+
 .top-section {
 	height: 300px;
 	width: 100%;
@@ -371,3 +372,6 @@ header nav {
 	margin-top: 3em;
 }
 
+.game-comments {
+	display: none;
+}
