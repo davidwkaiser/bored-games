@@ -1,22 +1,49 @@
 .user-profile
+  - if flash[:notice]
+    %ul.notices
+    - flash[:notice].each do |note|
+      %li= note
+  - if flash[:errors]
+    %ul.errors
+    - flash[:errors].each do |err|
+      %li= err
   %h1= @user.username
   %p we will add list of games and other user stuff later
 
-  = link_to 'Edit', edit_user_path(@user)
-  = button_to 'Delete', @user, method: :delete, data: {confirm: "Are you sure?"}
-  = button_to 'Add Friend', [@user, :relationships]
+  - if current_user == @user
+    = link_to 'Edit', edit_user_path(@user)
+    = button_to 'Delete', @user, method: :delete, data: {confirm: "Are you sure?"}
 
-  %h3 Friends
-  %ul
-    - if @user.friends
-      - @user.friends.each do |friend|
-        %li
-          %h4= link_to "#{friend.username}", friend
+  - if current_user != @user && !current_user.is_friend?(@user)
+    = button_to 'Add Friend', user_relationships_path(@user)
 
+  - if current_user.is_friend?(@user) || current_user == @user
+    %h3 Friends
+    %ul
+      - if @user.friends
+        - @user.friends.each do |friend|
+          %li
+            %h4= link_to "#{friend.username}", friend
 
-  %h3 Game Library
-  %ul
-    - if @user.games
-      - @user.games.each do |game|
-        %li
-          %h4= link_to "#{game.name}", game
+    - if current_user == @user
+      %h3 Pending Requests
+      %ul
+        - if @user.friends
+          - @user.pending_friends.each do |request|
+            %li= link_to "#{request.username}", request
+
+        - if @user.pending_friends
+          - @user.requested_friends.each do |pending_friend|
+            %li= link_to "#{pending_friend.username}", pending_friend
+
+            - if current_user.request(pending_friend)[0]
+              - request_id = current_user.request(pending_friend)[0]
+              %li= button_to 'Accept Friend', user_relationship_path(@user.id, request_id), method: :put
+
+    %h3 Game Library
+    %ul
+      - if @user.games
+        - @user.games.each do |game|
+          %li
+            %h4= link_to "#{game.name}", game
+
