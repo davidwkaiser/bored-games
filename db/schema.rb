@@ -59,9 +59,9 @@ ActiveRecord::Schema.define(version: 20160505223415) do
   create_table "relationships", force: :cascade do |t|
     t.integer  "sender_id"
     t.integer  "receiver_id"
-    t.boolean  "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "status",      default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "users", force: :cascade do |t|

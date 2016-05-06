@@ -1,20 +1,29 @@
 class RelationshipsController < ApplicationController
   def create
-    sender_id = session[:user_id]
-    @user = User.find(params[:user_id])
-    receiver_id = @user.id
-    @relationship = Relationship.new(sender_id: sender_id, receiver_id: receiver_id)
-    if @relationship.save
-      redirect_to @user #this should show without an "add friend button"
+    user = User.find(params[:user_id])
+    relationship = current_user.sent_relationships.new(receiver: user)
+    if relationship.save
+      redirect_to user
     else
-      redirect_to @user #the target's original page
+      flash[:errors] = ["Already sent request!"]
+      redirect_to user #the target's original page
     end
+  end
+
+  def update
+    rel = current_user.received_relationships.find(params[:id])
+    rel.status = true
+    rel.save
+    flash[:notice] = ["New friend added!"]
+    redirect_to current_user
   end
 
   private
   def relationship_params
-    params.require(:relationship).permit(:receiver_id)
+    params.require(:user).permit(:other_id)
   end
 
+  def info_params
+    params.require(:info).permit(:sender_id, :receiver_id, :status)
+  end
 end
-
