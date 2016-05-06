@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_many :sent_relationships, class_name: "Relationship", foreign_key: :receiver_id
   has_many :requested_friends, through: :sent_relationships, source: :sender
   has_many :friend_requests, through: :received_relationships, source: :receiver
+  has_many  :comments
 
   def friends
     friends = self.requested_friends + self.friend_requests
