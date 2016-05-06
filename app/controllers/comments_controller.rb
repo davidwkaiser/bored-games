@@ -2,20 +2,26 @@
   class CommentsController < ApplicationController
     def new
       @game = Game.find(params[:game_id])
-      p @game
-      @comment = @game.comments.new(user_id: current_user.id, game_id: @game.id)
+      if current_user
+        @comment = @game.comments.new(user_id: current_user.id, game_id: @game.id)
+      else
+        redirect_to game_path(@game)
+      end
     end
 
     def create
-      p params
-      @game = Game.find(params[:game_id])
-      @comment = @game.comments.new(comment_params)
-      @comment.user = current_user
+      if current_user
+        @game = Game.find(params[:game_id])
+        @comment = @game.comments.new(comment_params)
+        @comment.user = current_user
 
-      if @comment.save
-        redirect_to @comment.game
-      else
-        redirect_to new_game_comment_path(game_id: @commment.game.id)
+        if @comment.save
+          flash[:notice] = ["Thank you for your comment!"]
+          redirect_to @comment.game
+        else
+          flash[:errors] = @comment.errors.full_messages
+          redirect_to new_game_comment_path(game_id: @game.id)
+        end
       end
     end
 

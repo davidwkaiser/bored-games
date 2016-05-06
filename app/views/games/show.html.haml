@@ -1,29 +1,29 @@
 .game-info
-  .game-headers
-    %p= @game.name
-    %img{ src: "http:"+@game.image_url }
-  .description
-    %p Votes: #{@game.votes.count}
-    %p= "Time to Play: #{@game.play_time} minutes"
-    %p= "Players: #{@game.min_players} - #{@game.max_players}"
-    %p= "Published: #{@game.year_published}"
+  .top-section
+    .game-headers
+      %p= @game.name
+      %img{ src: "http:"+@game.image_url }
+    .description
+      %p Points: #{@game.votes.count}
+      %p= "Time to Play: #{@game.play_time} minutes"
+      %p= "Players: #{@game.min_players} - #{@game.max_players}"
+      %p= "Published: #{@game.year_published}"
 
   .buttons
-    - if @vote
-      - if @vote.errors.any
-        = @vote.errors.full_messages
+    - if @vote && @vote.errors.any 
+      = @vote.errors.full_messages
     - if current_user && !current_user.games.include?(@game)
-      = link_to "Add to Library", additions_path(game_id: @game.id), method: :post
+      = button_to "Add to Library", additions_path(game_id: @game.id), method: :post
     - elsif current_user && current_user.games.include?(@game)
-      = link_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
-    = button_to "Vote!", votes_path(voteable_id: @game.id), method: :post
+      = button_to "Remove from Library", addition_path(user_id: current_user.id), method: :delete
+      = button_to "Give point", votes_path(voteable_id: @game.id), method: :post
 
   %p.description-header Description
   .description-text= raw @game.description
   .mechanics
     - @game.mechanics.each do |mechanic|
       %p= mechanic.description
-  .add-comment= link_to "Add comment", new_game_comment_path(game_id: @game.id)
+  .add-comment= button_to "Add comment", new_game_comment_path(game_id: @game.id), method: :get
   .comment-section
     = render @game.comments
 
