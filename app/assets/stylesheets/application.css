@@ -104,7 +104,7 @@ header nav {
 	margin-right: 10%;
 	margin-left: 10%;
 	width: 80%;
-	
+
 }
 
 .login-form, .new-user-form, .edit-user-form {
@@ -305,6 +305,10 @@ input {
 
 .add-comment, .comment-section {
 	padding-top: 1em;
+}
+
+.game-comments {
+	display: none;
 }
 
 

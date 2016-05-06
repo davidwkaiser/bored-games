@@ -5,12 +5,18 @@ class VotesController < ApplicationController
 		if current_user.games.include?(@game)
 			@vote = current_user.votes.new(voteable: @game)
 			if @vote.save
-				redirect_to @game
+				@game
 			else
 				redirect_to @game
 			end
 		else
-			redirect_to @game
+			respond_to do |format|
+				format.js { render 'error' }
+				format.html  do
+					flash[:error] = ["You can only vote on games in your library!"]
+					redirect_to @game
+				end
+			end
 		end
 	end
 

@@ -21,7 +21,7 @@
         - @user.pending_friends.each do |pending_friend|
           %p= link_to "#{pending_friend.username}", pending_friend
 
-          - if current_user.request(pending_friend)[0]
+          - if current_user.request(pendinsg_friend)[0]
             - request_id = current_user.request(pending_friend)[0]
             .button= button_to 'Accept Friend', user_relationship_path(@user.id, request_id), method: :put
 
