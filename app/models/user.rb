@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
     Relationship.where(receiver: self, status: true).each do |rel|
       friends << rel.sender
     end
-    friends
+    friends.uniq
   end
 
   def pending_friends
@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
     self.received_relationships.where(status: false).each do |rel|
       friends << rel.sender
     end
-    friends
+    friends.uniq
   end
 
   def sent_requests
