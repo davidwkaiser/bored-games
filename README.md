@@ -1,3 +1,5 @@
+# bored-games
+
 Team A.R.C.H. (Adult Regular Coding Humans)
 
 Members:
@@ -35,12 +37,3 @@ User Stories for MVP:
 
 
 ![schema](./public/schema.png)
-
-[die-turbolinks]: http://blog.steveklabnik.com/posts/2013-06-25-removing-turbolinks-from-rails-4
-[CI]: http://en.wikipedia.org/wiki/Continuous_integration
-[TravisCI]: https://travis-ci.org/recent
-[CircleCI]: https://circleci.com/
-[Pivotal Tracker]: https://pivotaltracker.com
-[Trello]: https://trello.com/
-[Slack]: https://slack.com/
-[cls]: http://en.wikipedia.org/wiki/Command-line_interface
