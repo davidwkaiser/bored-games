@@ -1,5 +1,9 @@
 # bored-games
 
+'Bored? Games!' is a web application that allows users to search through a database of board games using varying criteria. Users can also save games to their libraries, add other users as friends, give their favorite games 'points' to give them a positive rating, and view their friends' libraries of games.
+
+The application is a Ruby on Rails program that that is hosted on [App](https://bored-games-arch.herokuapp.com/ "Heroku") and uses a PostgreSQL database that was populated using Nokogiri and the [board game geek](http://boardgamegeek.com/wiki/page/BGG_XML_API2 "Board Game Geek API").
+
 Team A.R.C.H. (Adult Regular Coding Humans)
 
 Members:
